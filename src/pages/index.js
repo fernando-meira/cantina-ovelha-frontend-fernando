@@ -1,4 +1,4 @@
-import Main from './main';
-import Repositories from './repositories';
+import Main from './Main';
+import Repositories from './Repositories';
 
 export { Main, Repositories };
