@@ -1,7 +1,13 @@
 import React from 'react';
 
+import { Header } from '../../components';
+
 import { Container } from './styles';
 
 export default function Main() {
-  return <h1>main</h1>;
+  return (
+    <Container>
+      <Header />
+    </Container>
+  );
 }
