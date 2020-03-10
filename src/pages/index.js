@@ -1,4 +1,4 @@
 import Main from './Main';
-import Repositories from './Repositories';
+import Restaurants from './Restaurants';
 
-export { Main, Repositories };
+export { Main, Restaurants };
