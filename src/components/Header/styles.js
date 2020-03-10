@@ -8,5 +8,5 @@ export const Container = styled.header`
   height: ${pxToRem(62)};
 
   background: ${colors.green};
-  box-shadow: 0px 4px 8px #00000029;
+  box-shadow: 0px 4px 8px ${colors.shadow};
 `;

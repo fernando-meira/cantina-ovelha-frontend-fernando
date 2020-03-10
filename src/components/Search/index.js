@@ -3,19 +3,22 @@ import { FaSearch } from 'react-icons/fa';
 import { colors } from '../../themes';
 
 import { Container, SubmitButton } from './styles';
+import { pxToRem } from '../../functions';
 
 export default function Search() {
   return (
     <Container>
       <div className="label">
-        <span>Buscar estabelecimento</span>
+        <label>Buscar estabelecimento</label>
       </div>
 
-      <input type="text" value="search" />
+      <input type="text" id="Search" name="Search" />
 
-      <SubmitButton type="button" onClick={() => {}}>
-        <FaSearch size={16} color={colors.black} />
-      </SubmitButton>
+      <div>
+        <SubmitButton type="button">
+          <FaSearch />
+        </SubmitButton>
+      </div>
     </Container>
   );
 }

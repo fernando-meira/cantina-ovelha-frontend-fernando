@@ -1,5 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
+import { colors } from '.';
+import { pxToRem } from '../functions';
+
 export default createGlobalStyle`
   * {
     margin: 0;
@@ -13,13 +16,13 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #fff;
+    background: ${colors.white};
     -webkit-font-smoothing: antialiased !important;
   }
 
   body, input, button {
-    color: #222;
-    font-size: 1rem;
+    color: ${colors.dark};
+    font-size: ${pxToRem(16)};
     font-family: Montserrat, Arial, Helvetica, sans-serif;
   }
 

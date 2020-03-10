@@ -3,42 +3,35 @@ import styled from 'styled-components';
 import { metrics, colors } from '../../themes';
 import { pxToRem } from '../../functions';
 
-export const Container = styled.form`
-  height: ${metrics.baseSpacing(5)};
-  width: 80%;
-  max-width: ${pxToRem(840)};
-  box-shadow: 0px 2px 4px #00000029;
-  padding: 0 ${metrics.baseSpacing(3)};
-  border-radius: ${metrics.borderRadius(10)};
+export const Container = styled.div`
+  margin: 0 auto;
+  height: ${pxToRem(40)};
+  width: ${pxToRem(840)};
+  padding: ${pxToRem(20)};
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  > input {
-    border: none;
-    width: 100%;
-    font-weight: 500;
-    color: ${colors.black};
-    background: ${colors.grey};
-    &::placeholder {
-      color: ${colors.black};
-    }
-  }
-  > button {
-    border: none;
-    background: transparent;
+  color: ${colors.gray};
+  box-shadow: 0 2px 4px ${colors.shadow};
+  border-radius: ${pxToRem(20)};
+
+  div > label {
+    margin: 0 ${pxToRem(16)};
   }
 
   input {
-    background: ${colors.black};
+    border: none;
+
+    flex: 1;
+
+    background: ${colors.transparent};
   }
 `;
 
 export const SubmitButton = styled.button`
   border: none;
 
-  display: flex;
-  align-items: center;
-  background: transparent;
+  background: ${colors.transparent};
 `;

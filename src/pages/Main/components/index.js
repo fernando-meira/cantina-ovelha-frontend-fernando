@@ -1,3 +1,3 @@
-import Search from './Search';
+import TopMessage from './TopMessage';
 
-export { Search };
+export { TopMessage };
