@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { metrics, colors } from '../../themes';
+import { colors } from '../../themes';
 import { pxToRem } from '../../functions';
 
 export const Container = styled.div`
