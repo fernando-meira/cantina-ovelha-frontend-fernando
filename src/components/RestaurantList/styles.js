@@ -12,6 +12,8 @@ export const Container = styled.ul`
 
   list-style: none;
   li {
+    position: relative;
+
     display: flex;
     align-items: center;
     padding: ${pxToRem(8)};
@@ -35,6 +37,27 @@ export const Container = styled.ul`
 
       > span {
         font-size: ${pxToRem(12)};
+      }
+    }
+
+    .OpenOrClosed {
+      position: absolute;
+      top: ${pxToRem(-24)};
+      right: ${pxToRem(-24)};
+
+      width: ${pxToRem(48)};
+      height: ${pxToRem(48)};
+      border-radius: 50%;
+
+      text-align: center;
+      justify-content: center;
+
+      background: ${colors.purple};
+
+      p {
+        font-weight: 800;
+        color: ${colors.white};
+        font-size: ${pxToRem(8)};
       }
     }
   }

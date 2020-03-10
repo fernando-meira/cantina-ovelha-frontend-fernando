@@ -13,14 +13,9 @@ export default function RestaurantList() {
           <strong>Nome do Restaurante</strong>
           <span>Endereço do restaurante</span>
         </div>
-      </li>
 
-      <li>
-        <img src={logo} alt="Perfil Restaurante" />
-
-        <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
+        <div className="OpenOrClosed">
+          <p>Aberto agora</p>
         </div>
       </li>
 
@@ -31,14 +26,9 @@ export default function RestaurantList() {
           <strong>Nome do Restaurante</strong>
           <span>Endereço do restaurante</span>
         </div>
-      </li>
 
-      <li>
-        <img src={logo} alt="Perfil Restaurante" />
-
-        <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
+        <div className="OpenOrClosed">
+          <p>Aberto agora</p>
         </div>
       </li>
 
@@ -49,14 +39,9 @@ export default function RestaurantList() {
           <strong>Nome do Restaurante</strong>
           <span>Endereço do restaurante</span>
         </div>
-      </li>
 
-      <li>
-        <img src={logo} alt="Perfil Restaurante" />
-
-        <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
+        <div className="OpenOrClosed">
+          <p>Aberto agora</p>
         </div>
       </li>
 
@@ -67,14 +52,9 @@ export default function RestaurantList() {
           <strong>Nome do Restaurante</strong>
           <span>Endereço do restaurante</span>
         </div>
-      </li>
 
-      <li>
-        <img src={logo} alt="Perfil Restaurante" />
-
-        <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
+        <div className="OpenOrClosed">
+          <p>Aberto agora</p>
         </div>
       </li>
 
@@ -85,14 +65,9 @@ export default function RestaurantList() {
           <strong>Nome do Restaurante</strong>
           <span>Endereço do restaurante</span>
         </div>
-      </li>
 
-      <li>
-        <img src={logo} alt="Perfil Restaurante" />
-
-        <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
+        <div className="OpenOrClosed">
+          <p>Aberto agora</p>
         </div>
       </li>
 
@@ -103,6 +78,10 @@ export default function RestaurantList() {
           <strong>Nome do Restaurante</strong>
           <span>Endereço do restaurante</span>
         </div>
+
+        <div className="OpenOrClosed">
+          <p>Aberto agora</p>
+        </div>
       </li>
 
       <li>
@@ -111,6 +90,75 @@ export default function RestaurantList() {
         <div>
           <strong>Nome do Restaurante</strong>
           <span>Endereço do restaurante</span>
+        </div>
+
+        <div className="OpenOrClosed">
+          <p>Aberto agora</p>
+        </div>
+      </li>
+
+      <li>
+        <img src={logo} alt="Perfil Restaurante" />
+
+        <div>
+          <strong>Nome do Restaurante</strong>
+          <span>Endereço do restaurante</span>
+        </div>
+
+        <div className="OpenOrClosed">
+          <p>Aberto agora</p>
+        </div>
+      </li>
+
+      <li>
+        <img src={logo} alt="Perfil Restaurante" />
+
+        <div>
+          <strong>Nome do Restaurante</strong>
+          <span>Endereço do restaurante</span>
+        </div>
+
+        <div className="OpenOrClosed">
+          <p>Aberto agora</p>
+        </div>
+      </li>
+
+      <li>
+        <img src={logo} alt="Perfil Restaurante" />
+
+        <div>
+          <strong>Nome do Restaurante</strong>
+          <span>Endereço do restaurante</span>
+        </div>
+
+        <div className="OpenOrClosed">
+          <p>Aberto agora</p>
+        </div>
+      </li>
+
+      <li>
+        <img src={logo} alt="Perfil Restaurante" />
+
+        <div>
+          <strong>Nome do Restaurante</strong>
+          <span>Endereço do restaurante</span>
+        </div>
+
+        <div className="OpenOrClosed">
+          <p>Aberto agora</p>
+        </div>
+      </li>
+
+      <li>
+        <img src={logo} alt="Perfil Restaurante" />
+
+        <div>
+          <strong>Nome do Restaurante</strong>
+          <span>Endereço do restaurante</span>
+        </div>
+
+        <div className="OpenOrClosed">
+          <p>Aberto agora</p>
         </div>
       </li>
     </Container>
