@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 import { colors } from '../../themes';
 import { pxToRem } from '../../functions';
@@ -6,13 +7,23 @@ import { pxToRem } from '../../functions';
 export const Container = styled.ul`
   margin-top: ${pxToRem(46)};
 
-  display: grid;
-  grid-gap: ${pxToRem(48)};
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 
   list-style: none;
+
+  ${media.lessThan('small')`
+    margin-top: ${pxToRem(10)}
+
+    flex-direction: column;
+  `}
+
   li {
     position: relative;
+
+    width: ${pxToRem(367)};
+    margin: 20px 34px;
 
     display: flex;
     align-items: center;
@@ -21,6 +32,10 @@ export const Container = styled.ul`
 
     background: ${colors.white};
     box-shadow: 0px 2px 4px ${colors.shadow};
+
+    ${media.lessThan('small')`
+      width: ${pxToRem(300)}
+    `}
 
     img {
       align-self: center;

@@ -4,7 +4,7 @@ import api from '../../services/api';
 import logo from '../../themes/assets/images/vegan-restaurant-logo-design_1438-10.png';
 import { Container, OpenOrClosed } from './styles';
 
-export default function RestaurantList(poducts) {
+export default function RestaurantList() {
   const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
