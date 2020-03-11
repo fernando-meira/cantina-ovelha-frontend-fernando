@@ -26,6 +26,7 @@ export const Container = styled.ul`
       align-self: center;
 
       max-width: ${pxToRem(100)};
+      max-height: ${pxToRem(100)};
     }
 
     div {
@@ -39,26 +40,27 @@ export const Container = styled.ul`
         font-size: ${pxToRem(12)};
       }
     }
+  }
+`;
 
-    .OpenOrClosed {
-      position: absolute;
-      top: ${pxToRem(-24)};
-      right: ${pxToRem(-24)};
+export const OpenOrClosed = styled.div`
+  position: absolute;
+  top: ${pxToRem(-24)};
+  right: ${pxToRem(-24)};
 
-      width: ${pxToRem(48)};
-      height: ${pxToRem(48)};
-      border-radius: 50%;
+  width: ${pxToRem(48)};
+  height: ${pxToRem(48)};
+  border-radius: 50%;
 
-      text-align: center;
-      justify-content: center;
+  text-align: center;
+  justify-content: center;
 
-      background: ${colors.purple};
+  background: ${props =>
+    props.status ? `${colors.purple}` : `${colors.lightPurple}`};
 
-      p {
-        font-weight: 800;
-        color: ${colors.white};
-        font-size: ${pxToRem(8)};
-      }
-    }
+  p {
+    font-weight: 800;
+    color: ${colors.white};
+    font-size: ${pxToRem(8)};
   }
 `;
