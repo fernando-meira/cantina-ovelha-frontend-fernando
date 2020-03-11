@@ -7,7 +7,7 @@ export default function Search() {
   return (
     <Container>
       <div className="label">
-        <label>Buscar estabelecimento</label>
+        <label htmlFor="Search">Buscar estabelecimento</label>
       </div>
 
       <input
