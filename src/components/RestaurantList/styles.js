@@ -85,13 +85,26 @@ export const OpenOrClosed = styled.div`
 
   text-align: center;
   justify-content: center;
+  box-shadow: 0px 2px 4px ${colors.shadow};
 
   background: ${props =>
     props.status ? `${colors.purple}` : `${colors.lightPurple}`};
 
+  ${media.lessThan('small')`
+    top: ${pxToRem(-12)};
+    right: ${pxToRem(-12)};
+
+    width: ${pxToRem(32)};
+    height: ${pxToRem(32)};
+  `}
+
   p {
-    font-weight: 800;
+    font-weight: 600;
     color: ${colors.white};
     font-size: ${pxToRem(8)};
+
+    ${media.lessThan('small')`
+      font-size: 6px;
+    `}
   }
 `;
