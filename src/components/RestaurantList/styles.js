@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 import { colors } from '../../themes';
 import { pxToRem } from '../../functions';
@@ -40,8 +41,12 @@ export const Container = styled.ul`
       }
     }
 
-    .OpenOrClosed {
-      position: absolute;
+    }
+  }
+`;
+
+export const OpenOrClosed = styled.div`
+  position: absolute;
       top: ${pxToRem(-24)};
       right: ${pxToRem(-24)};
 
@@ -58,7 +63,4 @@ export const Container = styled.ul`
         font-weight: 800;
         color: ${colors.white};
         font-size: ${pxToRem(8)};
-      }
-    }
-  }
 `;

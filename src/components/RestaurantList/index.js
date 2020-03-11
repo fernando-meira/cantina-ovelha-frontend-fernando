@@ -1,165 +1,28 @@
 import React from 'react';
 
 import logo from '../../themes/assets/images/vegan-restaurant-logo-design_1438-10.png';
-import { Container } from './styles';
+import { Container, OpenOrClosed } from './styles';
 
 export default function RestaurantList() {
+  const listRestaurant = {
+    img: logo,
+    name: 'Nome do Restaurante',
+    address: 'Endereço',
+    open: true,
+  };
   return (
     <Container>
       <li>
-        <img src={logo} alt="Perfil Restaurante" />
+        <img src={listRestaurant.img} alt={listRestaurant.name} />
 
         <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
+          <strong>{listRestaurant.name}</strong>
+          <span>{listRestaurant.address}</span>
         </div>
 
-        <div className="OpenOrClosed">
-          <p>Aberto agora</p>
-        </div>
-      </li>
-
-      <li>
-        <img src={logo} alt="Perfil Restaurante" />
-
-        <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
-        </div>
-
-        <div className="OpenOrClosed">
-          <p>Aberto agora</p>
-        </div>
-      </li>
-
-      <li>
-        <img src={logo} alt="Perfil Restaurante" />
-
-        <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
-        </div>
-
-        <div className="OpenOrClosed">
-          <p>Aberto agora</p>
-        </div>
-      </li>
-
-      <li>
-        <img src={logo} alt="Perfil Restaurante" />
-
-        <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
-        </div>
-
-        <div className="OpenOrClosed">
-          <p>Aberto agora</p>
-        </div>
-      </li>
-
-      <li>
-        <img src={logo} alt="Perfil Restaurante" />
-
-        <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
-        </div>
-
-        <div className="OpenOrClosed">
-          <p>Aberto agora</p>
-        </div>
-      </li>
-
-      <li>
-        <img src={logo} alt="Perfil Restaurante" />
-
-        <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
-        </div>
-
-        <div className="OpenOrClosed">
-          <p>Aberto agora</p>
-        </div>
-      </li>
-
-      <li>
-        <img src={logo} alt="Perfil Restaurante" />
-
-        <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
-        </div>
-
-        <div className="OpenOrClosed">
-          <p>Aberto agora</p>
-        </div>
-      </li>
-
-      <li>
-        <img src={logo} alt="Perfil Restaurante" />
-
-        <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
-        </div>
-
-        <div className="OpenOrClosed">
-          <p>Aberto agora</p>
-        </div>
-      </li>
-
-      <li>
-        <img src={logo} alt="Perfil Restaurante" />
-
-        <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
-        </div>
-
-        <div className="OpenOrClosed">
-          <p>Aberto agora</p>
-        </div>
-      </li>
-
-      <li>
-        <img src={logo} alt="Perfil Restaurante" />
-
-        <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
-        </div>
-
-        <div className="OpenOrClosed">
-          <p>Aberto agora</p>
-        </div>
-      </li>
-
-      <li>
-        <img src={logo} alt="Perfil Restaurante" />
-
-        <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
-        </div>
-
-        <div className="OpenOrClosed">
-          <p>Aberto agora</p>
-        </div>
-      </li>
-
-      <li>
-        <img src={logo} alt="Perfil Restaurante" />
-
-        <div>
-          <strong>Nome do Restaurante</strong>
-          <span>Endereço do restaurante</span>
-        </div>
-
-        <div className="OpenOrClosed">
-          <p>Aberto agora</p>
-        </div>
+        <OpenOrClosed loading={listRestaurant.open}>
+          {listRestaurant.open == true ? <p>aberto agora</p> : <p>fechado</p>}
+        </OpenOrClosed>
       </li>
     </Container>
   );
