@@ -1,9 +1,7 @@
 import React from 'react';
 import { FaSearch } from 'react-icons/fa';
-import { colors } from '../../themes';
 
 import { Container, SubmitButton } from './styles';
-import { pxToRem } from '../../functions';
 
 export default function Search() {
   return (
@@ -12,7 +10,12 @@ export default function Search() {
         <label>Buscar estabelecimento</label>
       </div>
 
-      <input type="text" id="Search" name="Search" />
+      <input
+        type="text"
+        id="Search"
+        name="Search"
+        placeholder="Buscar estabelecimento"
+      />
 
       <div>
         <SubmitButton type="button">
