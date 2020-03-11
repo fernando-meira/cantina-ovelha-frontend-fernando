@@ -20,9 +20,9 @@ export default function RestaurantList() {
     fetchRestaurants();
   }, []);
 
-  useEffect(() => {
-    console.log('Restaurantes', restaurants);
-  }, [restaurants]);
+  // useEffect(() => {
+  //   console.log('Restaurantes', restaurants);
+  // }, [restaurants]);
 
   return (
     <Container>
