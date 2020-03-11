@@ -10,8 +10,17 @@ export const Container = styled.ul`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 
   list-style: none;
+
+  ${media.lessThan('large')`
+    margin: ${pxToRem(46)} auto;
+  `}
+
+  ${media.lessThan('medium')`
+    margin-top: ${pxToRem(32)};
+  `}
 
   ${media.lessThan('small')`
     margin-top: ${pxToRem(10)}
@@ -22,19 +31,23 @@ export const Container = styled.ul`
   li {
     position: relative;
 
-    width: ${pxToRem(367)};
     margin: 20px 34px;
-
-    display: flex;
-    align-items: center;
+    width: ${pxToRem(367)};
     padding: ${pxToRem(8)};
     border-radius: ${pxToRem(4)};
 
+    display: flex;
+    align-items: center;
+
     background: ${colors.white};
     box-shadow: 0px 2px 4px ${colors.shadow};
+    transition: transform 0.2s;
+
+    ${media.lessThan('medium')`
+      width: ${pxToRem(300)};
+    `}
 
     ${media.lessThan('small')`
-      width: ${pxToRem(300)}
     `}
 
     img {
@@ -55,6 +68,9 @@ export const Container = styled.ul`
         font-size: ${pxToRem(12)};
       }
     }
+  }
+  li:hover {
+    transform: scale(1.04);
   }
 `;
 
