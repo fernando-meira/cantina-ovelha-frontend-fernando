@@ -21,7 +21,7 @@ export default createGlobalStyle`
   }
 
   body, input, button {
-    color: ${colors.dark};
+    color: ${colors.gray};
     font-size: ${pxToRem(16)};
     font-family: Montserrat, Arial, Helvetica, sans-serif;
   }

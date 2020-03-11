@@ -7,13 +7,23 @@ import { pxToRem } from '../../functions';
 export const Container = styled.ul`
   margin-top: ${pxToRem(46)};
 
-  display: grid;
-  grid-gap: ${pxToRem(48)};
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 
   list-style: none;
+
+  ${media.lessThan('small')`
+    margin-top: ${pxToRem(10)}
+
+    flex-direction: column;
+  `}
+
   li {
     position: relative;
+
+    width: ${pxToRem(367)};
+    margin: 20px 34px;
 
     display: flex;
     align-items: center;
@@ -23,10 +33,15 @@ export const Container = styled.ul`
     background: ${colors.white};
     box-shadow: 0px 2px 4px ${colors.shadow};
 
+    ${media.lessThan('small')`
+      width: ${pxToRem(300)}
+    `}
+
     img {
       align-self: center;
 
       max-width: ${pxToRem(100)};
+      max-height: ${pxToRem(100)};
     }
 
     div {
@@ -40,27 +55,27 @@ export const Container = styled.ul`
         font-size: ${pxToRem(12)};
       }
     }
-
-    }
   }
 `;
 
 export const OpenOrClosed = styled.div`
   position: absolute;
-      top: ${pxToRem(-24)};
-      right: ${pxToRem(-24)};
+  top: ${pxToRem(-24)};
+  right: ${pxToRem(-24)};
 
-      width: ${pxToRem(48)};
-      height: ${pxToRem(48)};
-      border-radius: 50%;
+  width: ${pxToRem(48)};
+  height: ${pxToRem(48)};
+  border-radius: 50%;
 
-      text-align: center;
-      justify-content: center;
+  text-align: center;
+  justify-content: center;
 
-      background: ${colors.purple};
+  background: ${props =>
+    props.status ? `${colors.purple}` : `${colors.lightPurple}`};
 
-      p {
-        font-weight: 800;
-        color: ${colors.white};
-        font-size: ${pxToRem(8)};
+  p {
+    font-weight: 800;
+    color: ${colors.white};
+    font-size: ${pxToRem(8)};
+  }
 `;
