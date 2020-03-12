@@ -16,7 +16,7 @@ import {
 import 'react-accessible-accordion/dist/fancy-example.css';
 
 export default function Example() {
-  const [items, setItems] = useState([
+  const [items] = useState([
     {
       id: 1,
       type: 'Almoço',
