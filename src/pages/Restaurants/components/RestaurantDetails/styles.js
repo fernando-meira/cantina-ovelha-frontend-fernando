@@ -25,10 +25,13 @@ export const Details = styled.div`
   }
 
   > p {
+    margin: ${pxToRem(8)} 0;
+
     font-size: ${pxToRem(16)};
   }
 
   > p.Days {
+    margin: 0;
     font-size: ${pxToRem(12)};
 
     > span {
