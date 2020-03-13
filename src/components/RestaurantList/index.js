@@ -8,8 +8,6 @@ import { Container, OpenOrClosed } from './styles';
 export default function RestaurantList() {
   const data = mock;
 
-  console.log('Mock', mock);
-
   return (
     <Container>
       {data.map(restaurant => (
