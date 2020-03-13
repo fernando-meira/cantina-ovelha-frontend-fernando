@@ -16,7 +16,7 @@ export const TopContainers = styled.div`
 
 export const LateralBlock = styled.aside`
   width: ${pxToRem(282)};
-  height: ${pxToRem(765)};
+  height: ${pxToRem(675)};
   margin-top: ${pxToRem(207)};
   margin-left: ${pxToRem(134)};
 

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 import {
   Accordion,
   AccordionItem,
@@ -7,13 +6,12 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
+
+import { formatPrice } from '../../../../functions';
 import lunch from '../../../../themes/assets/images/prato-de-restaurante-vegetariano@2x.png';
 
-import { Container, ItemRestaurant } from './styles';
 import mock from './dataMock';
-
-// Demo styles, see 'Styles' section below for some notes on use.
-import 'react-accessible-accordion/dist/fancy-example.css';
+import { Container, ItemRestaurant } from './styles';
 
 export default function Example() {
   const data = mock;
@@ -31,18 +29,20 @@ export default function Example() {
             </AccordionItemHeading>
             <AccordionItemPanel>
               <div className="Panel">
-                <ItemRestaurant>
-                  <img src={lunch} alt="Almoço" />
-                  <div className="PlateDetais">
-                    <strong>Nome do Prato</strong>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do
-                    </p>
+                {category.products.map(product => (
+                  <ItemRestaurant key={product.id}>
+                    <img src={lunch} alt={product.name} />
+                    <div className="PlateDetais">
+                      <strong>{product.name}</strong>
+                      <p>{product.description}</p>
 
-                    <span>R$ 19,90</span>
-                  </div>
-                </ItemRestaurant>
+                      <div className="ProductValues">
+                        <span>{formatPrice(product.promotionalValue)}</span>
+                        <p>{formatPrice(product.value)}</p>
+                      </div>
+                    </div>
+                  </ItemRestaurant>
+                ))}
               </div>
             </AccordionItemPanel>
           </AccordionItem>
