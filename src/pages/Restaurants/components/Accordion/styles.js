@@ -93,7 +93,11 @@ export const ItemRestaurant = styled.section`
   box-shadow: 0px 4px 8px ${colors.shadow};
 
   ${media.lessThan('1280px')`
-    width: ${pxToRem(352)};
+    width: ${pxToRem(384)};
+  `}
+
+  ${media.lessThan('medium')`
+    width: ${pxToRem(336)};
   `}
 
   img {
@@ -126,6 +130,10 @@ export const ItemRestaurant = styled.section`
       white-space: nowrap;
       text-overflow: ellipsis;
       font-size: ${pxToRem(16)};
+
+      ${media.lessThan('medium')`
+      font-size: ${pxToRem(14)};
+    `}
     }
   }
 
@@ -160,27 +168,36 @@ export const ItemRestaurant = styled.section`
 `;
 
 export const PromoCard = styled.div`
-  padding: 5px;
-  border-radius: 20px;
-  max-height: 20px;
+  padding: ${pxToRem(5)};
+  max-height: ${pxToRem(20)};
+  border-radius: ${pxToRem(20)};
 
   display: flex;
   flex-direction: row;
   align-items: center;
 
-  color: #fff;
+  white-space: nowrap;
+  color: ${colors.white};
   background: ${colors.purple};
 
   svg {
-    width: 8px;
-    margin-right: 5px;
+    width: ${pxToRem(8)};
+    margin-right: ${pxToRem(5)};
   }
 
   > p {
-    font-size: 10px !important;
+    font-size: ${pxToRem(10)} !important;
     span {
-      color: #fff !important;
-      font-size: 10px !important;
+      color: ${colors.white} !important;
+      font-size: ${pxToRem(10)} !important;
+
+      ${media.lessThan('medium')`
+        font-size: ${pxToRem(8)} !important;
+      `}
     }
+    ${media.lessThan(`medium`)`
+      font-size: ${pxToRem(8)} !important;
+
+    `}
   }
 `;

@@ -10,13 +10,26 @@ export const Container = styled.div`
   margin: 0 auto;
 
   ${media.lessThan('1280px')`
-    max-width: ${pxToRem(1170)}
+    max-width: ${pxToRem(1280)}
+  `}
+
+  ${media.lessThan('1024px')`
+    max-width: ${pxToRem(1024)}
+  `}
+
+  ${media.lessThan('medium')`
+    max-width: ${pxToRem(768)};
   `}
 `;
 
 export const TopContainers = styled.div`
   width: ${pxToRem(800)};
   margin-left: ${pxToRem(85)};
+
+  ${media.lessThan('medium')`
+    max-width: 90%;
+    margin: 0 auto;
+  `}
 `;
 
 export const LateralBlock = styled.aside`
@@ -29,6 +42,9 @@ export const LateralBlock = styled.aside`
 
   ${media.lessThan('1280px')`
     margin-left: ${pxToRem(85)};
+  `}
 
+  ${media.lessThan('1024px')`
+  display: none;
   `}
 `;
