@@ -1,32 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import api from '../../services/api';
+import React from 'react';
 
 import logo from '../../themes/assets/images/vegan-restaurant-logo-design_1438-10.png';
+
+import mock from './dataMock';
 import { Container, OpenOrClosed } from './styles';
 
 export default function RestaurantList() {
-  const [restaurants, setRestaurants] = useState([]);
+  const data = mock;
 
-  useEffect(() => {
-    async function fetchRestaurants() {
-      try {
-        const { data } = await api.get('restaurants');
-
-        setRestaurants(data);
-      } catch (error) {
-        console.log('Erro', error.message);
-      }
-    }
-    fetchRestaurants();
-  }, []);
-
-  // useEffect(() => {
-  //   console.log('Restaurantes', restaurants);
-  // }, [restaurants]);
+  console.log('Mock', mock);
 
   return (
     <Container>
-      {restaurants.map(restaurant => (
+      {data.map(restaurant => (
         <li key={restaurant.id}>
           <img src={logo} alt={restaurant.name} />
 

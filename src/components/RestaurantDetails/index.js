@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from '../../../../themes/assets/images/vegan-restaurant-logo-design_1438-10@2x.png';
+import logo from '../../themes/assets/images/vegan-restaurant-logo-design_1438-10@2x.png';
 import { Container, Details } from './styles';
 
 export default function RestaurantDetails() {
