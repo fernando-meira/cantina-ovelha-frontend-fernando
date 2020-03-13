@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
-import { pxToRem } from '../../../../functions';
+import { pxToRem } from '../../functions';
 
 export const Container = styled.div`
   margin: ${pxToRem(36)} 0;

@@ -1,7 +1,11 @@
 import React from 'react';
 
-import { Header, Search } from '../../components';
-import { RestaurantDetails, AccordionMenu } from './components';
+import {
+  Header,
+  Search,
+  RestaurantDetails,
+  AccordionMenu,
+} from '../../components';
 
 import { Container, TopContainers, LateralBlock } from './styles';
 

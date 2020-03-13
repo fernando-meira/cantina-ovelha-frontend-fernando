@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
-import { colors } from '../../../../themes';
-import { pxToRem } from '../../../../functions';
+import { colors } from '../../themes';
+import { pxToRem } from '../../functions';
 
 export const Container = styled.div`
   margin-top: ${pxToRem(24)};

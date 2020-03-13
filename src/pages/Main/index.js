@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Header, Search, RestaurantList } from '../../components';
-import { TopMessage } from './components';
+import { Header, Search, RestaurantList, TopMessage } from '../../components';
 
 import { Container } from './styles';
 

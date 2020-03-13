@@ -8,8 +8,8 @@ import {
   AccordionItemPanel,
 } from 'react-accessible-accordion';
 
-import { formatPrice } from '../../../../functions';
-import lunch from '../../../../themes/assets/images/prato-de-restaurante-vegetariano@2x.png';
+import { formatPrice } from '../../functions';
+import lunch from '../../themes/assets/images/prato-de-restaurante-vegetariano@2x.png';
 
 import mock from './dataMock';
 import { Container, ItemRestaurant, PromoCard } from './styles';
