@@ -12,11 +12,12 @@ import lunch from '../../../../themes/assets/images/prato-de-restaurante-vegetar
 import { Container, ItemRestaurant } from './styles';
 import mock from './dataMock';
 
-// Demo styles, see 'Styles' section below for some notes on use.
-import 'react-accessible-accordion/dist/fancy-example.css';
-
 export default function Example() {
   const data = mock;
+
+  useEffect(() => {
+    console.log('Mock', data);
+  }, []);
 
   return (
     <Container>
@@ -31,18 +32,17 @@ export default function Example() {
             </AccordionItemHeading>
             <AccordionItemPanel>
               <div className="Panel">
-                <ItemRestaurant>
-                  <img src={lunch} alt="Almoço" />
-                  <div className="PlateDetais">
-                    <strong>Nome do Prato</strong>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do
-                    </p>
+                {category.product.map(p => (
+                  <ItemRestaurant key={p.id}>
+                    <img src={p.image} alt={p.name} />
+                    <div className="PlateDetais">
+                      <strong>{p.name}</strong>
+                      <p>{p.description}</p>
 
-                    <span>R$ 19,90</span>
-                  </div>
-                </ItemRestaurant>
+                      <span>{p.value}</span>
+                    </div>
+                  </ItemRestaurant>
+                ))}
               </div>
             </AccordionItemPanel>
           </AccordionItem>

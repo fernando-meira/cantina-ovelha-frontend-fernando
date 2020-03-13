@@ -84,9 +84,73 @@ export default [
   {
     id: 3,
     type: 'Sobremesas',
+    product: [
+      {
+        id: 1,
+        image:
+          'https://melhorcomsaude.com.br/wp-content/uploads/2016/11/bebidas-mais-saud%C3%A1veis-do-que-a-%C3%A1gua-suco-de-beterraba-500x232.jpg',
+        name: 'Suco de Beterraba',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        value: 10.9,
+        promotionalValue: 4.9,
+      },
+      {
+        id: 2,
+        image:
+          'https://melhorcomsaude.com.br/wp-content/uploads/2016/11/%C3%A1gua-coco-500x334.jpg',
+        name: 'Água de coco',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        value: 10.9,
+        promotionalValue: 4.9,
+      },
+      {
+        id: 3,
+        image:
+          'https://melhorcomsaude.com.br/wp-content/uploads/2016/11/bebidas-mais-saud%C3%A1veis-do-que-a-%C3%A1gua-suco-de-beterraba-500x232.jpg',
+        name: 'Chá Verde',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        value: 8.9,
+        promotionalValue: 3.9,
+      },
+    ],
   },
   {
     id: 4,
     type: 'Acompanhamento',
+    product: [
+      {
+        id: 1,
+        image:
+          'https://melhorcomsaude.com.br/wp-content/uploads/2016/11/bebidas-mais-saud%C3%A1veis-do-que-a-%C3%A1gua-suco-de-beterraba-500x232.jpg',
+        name: 'Suco de Beterraba',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        value: 10.9,
+        promotionalValue: 4.9,
+      },
+      {
+        id: 2,
+        image:
+          'https://melhorcomsaude.com.br/wp-content/uploads/2016/11/%C3%A1gua-coco-500x334.jpg',
+        name: 'Água de coco',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        value: 10.9,
+        promotionalValue: 4.9,
+      },
+      {
+        id: 3,
+        image:
+          'https://melhorcomsaude.com.br/wp-content/uploads/2016/11/bebidas-mais-saud%C3%A1veis-do-que-a-%C3%A1gua-suco-de-beterraba-500x232.jpg',
+        name: 'Chá Verde',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        value: 8.9,
+        promotionalValue: 3.9,
+      },
+    ],
   },
 ];
