@@ -92,16 +92,15 @@ export const ItemRestaurant = styled.section`
   box-shadow: 0px 4px 8px ${colors.shadow};
 
   img {
-    height: 100%;
+    height: auto;
     max-width: ${pxToRem(115)};
   }
 
-  .PlateDetais {
+  .PlateDetails {
     padding: ${pxToRem(16)};
 
-    strong {
-      font-size: ${pxToRem(16)};
-    }
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     p {
       margin: ${pxToRem(8)} 0;
@@ -115,8 +114,24 @@ export const ItemRestaurant = styled.section`
     }
   }
 
+  .TopDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    strong {
+      width: 100px;
+
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: ${pxToRem(16)};
+    }
+  }
+
   .ProductValues {
     display: flex;
+    flex-direction: row;
     align-items: center;
 
     > p {
@@ -134,6 +149,32 @@ export const ItemRestaurant = styled.section`
 
     100% {
       opacity: 1;
+    }
+  }
+`;
+
+export const PromoCard = styled.div`
+  padding: 5px;
+  border-radius: 20px;
+  max-height: 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  color: #fff;
+  background: ${colors.purple};
+
+  svg {
+    width: 8px;
+    margin-right: 5px;
+  }
+
+  > p {
+    font-size: 10px !important;
+    span {
+      color: #fff !important;
+      font-size: 10px !important;
     }
   }
 `;

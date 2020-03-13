@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaAward } from 'react-icons/fa';
 import {
   Accordion,
   AccordionItem,
@@ -11,7 +12,7 @@ import { formatPrice } from '../../../../functions';
 import lunch from '../../../../themes/assets/images/prato-de-restaurante-vegetariano@2x.png';
 
 import mock from './dataMock';
-import { Container, ItemRestaurant } from './styles';
+import { Container, ItemRestaurant, PromoCard } from './styles';
 
 export default function Example() {
   const data = mock;
@@ -32,8 +33,17 @@ export default function Example() {
                 {category.products.map(product => (
                   <ItemRestaurant key={product.id}>
                     <img src={lunch} alt={product.name} />
-                    <div className="PlateDetais">
-                      <strong>{product.name}</strong>
+                    <div className="PlateDetails">
+                      <div className="TopDetails">
+                        <strong>{product.name}</strong>
+                        <PromoCard>
+                          <FaAward />
+
+                          <p>
+                            Promo <span>{category.type}</span>
+                          </p>
+                        </PromoCard>
+                      </div>
                       <p>{product.description}</p>
 
                       <div className="ProductValues">
