@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 import { colors } from '../../../../themes';
 import { pxToRem } from '../../../../functions';
@@ -91,6 +92,10 @@ export const ItemRestaurant = styled.section`
   background: ${colors.white};
   box-shadow: 0px 4px 8px ${colors.shadow};
 
+  ${media.lessThan('1280px')`
+    width: ${pxToRem(352)};
+  `}
+
   img {
     height: auto;
     max-width: ${pxToRem(115)};
@@ -102,15 +107,10 @@ export const ItemRestaurant = styled.section`
     overflow: hidden;
     text-overflow: ellipsis;
 
-    p {
+    > p {
       margin: ${pxToRem(8)} 0;
 
       font-size: ${pxToRem(12)};
-    }
-
-    span {
-      color: ${colors.green};
-      font-size: ${pxToRem(16)};
     }
   }
 
@@ -137,8 +137,14 @@ export const ItemRestaurant = styled.section`
     > p {
       margin-left: ${pxToRem(8)};
 
+      font-size: ${pxToRem(12)};
       color: ${colors.lightGray};
       text-decoration: line-through;
+    }
+
+    > span {
+      color: ${colors.green};
+      font-size: ${pxToRem(16)};
     }
   }
 

@@ -1,12 +1,17 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 import { pxToRem } from '../../functions';
 import { colors } from '../../themes';
 
 export const Container = styled.div`
-  max-width: 1366px;
+  max-width: ${pxToRem(1366)};
   display: flex;
   margin: 0 auto;
+
+  ${media.lessThan('1280px')`
+    max-width: ${pxToRem(1170)}
+  `}
 `;
 
 export const TopContainers = styled.div`
@@ -21,4 +26,9 @@ export const LateralBlock = styled.aside`
   margin-left: ${pxToRem(134)};
 
   background: ${colors.lighterGray};
+
+  ${media.lessThan('1280px')`
+    margin-left: ${pxToRem(85)};
+
+  `}
 `;

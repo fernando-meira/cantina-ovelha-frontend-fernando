@@ -14,7 +14,7 @@ import lunch from '../../../../themes/assets/images/prato-de-restaurante-vegetar
 import mock from './dataMock';
 import { Container, ItemRestaurant, PromoCard } from './styles';
 
-export default function Example() {
+export default function AccordionMenu() {
   const data = mock;
 
   return (
