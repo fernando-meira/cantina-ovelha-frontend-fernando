@@ -14,6 +14,11 @@ export const Container = styled.ul`
 
   list-style: none;
 
+  a {
+    text-decoration: none;
+    color: ${colors.gray}
+  }
+
   ${media.lessThan('large')`
     margin: ${pxToRem(46)} auto;
   `}
