@@ -1,8 +1,34 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 
-import { colors } from '../../themes';
+import { colors, metrics } from '../../themes';
 import { pxToRem } from '../../functions';
+
+const isDetailStyles = css`
+  padding-left: 0;
+  background: ${colors.greyDark};
+  > .label {
+    height: 100%;
+    min-width: ${pxToRem(214)};
+    margin-right: ${metrics.baseSpacing()};
+    border-radius: ${pxToRem(20)} 0 0 ${pxToRem(20)};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: ${colors.white};
+    ${media.lessThan('small')`
+      min-width: ${pxToRem(140)};
+    `}
+    > span {
+      font-size: 16px;
+      font-weight: 400;
+      color: ${colors.black};
+      ${media.lessThan('small')`
+        font-size: 16px;
+      `}
+    }
+  }
+`;
 
 export const Container = styled.div`
   margin: 0 auto;
@@ -49,6 +75,7 @@ export const Container = styled.div`
       color: ${colors.lightGray}
     }
   `}
+  ${({ isDetail }) => isDetail && isDetailStyles};
 `;
 
 export const SubmitButton = styled.button`
