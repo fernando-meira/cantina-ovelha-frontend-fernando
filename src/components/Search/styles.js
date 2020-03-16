@@ -5,16 +5,16 @@ import { colors } from '../../themes';
 import { pxToRem } from '../../functions';
 
 const isDetail = {
-  main: css`
-    background: ${colors.secondWhite};
+  modified: css`
+    background: ${colors.lighterGray};
 
     .label {
-      padding: 11px;
-      margin-left: -19px;
-      border-top-left-radius: 20px;
-      border-bottom-left-radius: 20px;
+      padding: ${pxToRem(11)};
+      margin-left: ${pxToRem(-19)};
+      border-top-left-radius: ${pxToRem(20)};
+      border-bottom-left-radius: ${pxToRem(20)};
 
-      background: red;
+      background-color: ${colors.secondWhite};
     }
   `,
 };
@@ -31,6 +31,7 @@ export const Container = styled.div`
   justify-content: space-between;
 
   box-shadow: 0 2px 4px ${colors.shadow};
+  background: ${colors.secondWhite};
 
   ${media.lessThan('medium')`
     max-width: ${pxToRem(672)}

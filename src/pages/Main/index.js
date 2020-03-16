@@ -10,7 +10,7 @@ export default function Main() {
       <Header />
       <Container>
         <TopMessage />
-        <Search searchStyle="main" />
+        <Search />
         <RestaurantList />
       </Container>
     </>
