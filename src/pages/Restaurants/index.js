@@ -3,8 +3,9 @@ import React from 'react';
 import {
   Header,
   Search,
-  RestaurantDetails,
+  ReturnButton,
   AccordionMenu,
+  RestaurantDetails,
 } from '../../components';
 
 import { Container, TopContainers, LateralBlock } from './styles';
@@ -14,6 +15,7 @@ export default function Restaurants() {
     <>
       <Header />
       <Container>
+        <ReturnButton />
         <TopContainers>
           <RestaurantDetails />
           <Search searchStyle="modified" text="Buscar no cardápio" />
