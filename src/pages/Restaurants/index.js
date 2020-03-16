@@ -16,7 +16,7 @@ export default function Restaurants() {
       <Container>
         <TopContainers>
           <RestaurantDetails />
-          <Search searchStyle="modified" />
+          <Search searchStyle="modified" text="Buscar no cardápio" />
           <AccordionMenu />
         </TopContainers>
         <LateralBlock />
