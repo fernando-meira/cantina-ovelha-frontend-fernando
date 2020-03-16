@@ -6,7 +6,7 @@ import { Container, SubmitButton } from './styles';
 export default function Search({ searchStyle }) {
   return (
     <Container searchStyle={searchStyle}>
-      <div className="label">Buscar estabelecimento</div>
+      <div className="label">Buscar no cardápio</div>
 
       <input
         type="text"
