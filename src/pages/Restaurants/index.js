@@ -36,8 +36,9 @@ const modalStyle = {
 Modal.setAppElement('#root');
 
 export default function Restaurants() {
-  const [modalIsOpen, setIsOpen] = useState(true);
+  const [modalIsOpen, setIsOpen] = useState(false);
   function openModal() {
+    console.log('Chamou');
     setIsOpen(true);
   }
 
@@ -58,8 +59,8 @@ export default function Restaurants() {
             onRequestClose={closeModal}
             style={modalStyle}
           >
-            <button onClick={closeModal}>
-              <IoIosCloseCircle />
+            <button onClick={() => closeModal()}>
+              <IoIosCloseCircle size="32" color="#333" />
             </button>
 
             <img src={pic} alt="pic" />
@@ -86,7 +87,7 @@ export default function Restaurants() {
               <p>R$ 19,00</p>
             </div>
           </Modal>
-          <AccordionMenu onClick={openModal} />
+          <AccordionMenu openModal={openModal} />
         </TopContainers>
         <LateralBlock />
       </Container>
