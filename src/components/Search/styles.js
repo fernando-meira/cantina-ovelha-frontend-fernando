@@ -1,8 +1,23 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 
 import { colors } from '../../themes';
 import { pxToRem } from '../../functions';
+
+const isDetail = {
+  main: css`
+    background: ${colors.secondWhite};
+
+    .label {
+      padding: 11px;
+      margin-left: -19px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+
+      background: red;
+    }
+  `,
+};
 
 export const Container = styled.div`
   margin: 0 auto;
@@ -25,8 +40,13 @@ export const Container = styled.div`
     max-width: ${pxToRem(320)};
   `}
 
-  div > label {
+  .label {
     margin: 0 ${pxToRem(16)};
+
+    padding: ${pxToRem(11)};
+    margin-left: ${pxToRem(-19)};
+    border-top-left-radius: ${pxToRem(20)};
+    border-bottom-left-radius: ${pxToRem(20)};
 
     ${media.lessThan('small')`
       display: none;
@@ -49,6 +69,8 @@ export const Container = styled.div`
       color: ${colors.lightGray}
     }
   `};
+
+  ${({ searchStyle }) => isDetail[searchStyle]};
 `;
 
 export const SubmitButton = styled.button`

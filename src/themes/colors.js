@@ -6,6 +6,7 @@ export default {
   shadow: '#00000029',
 
   white: '#ffffff',
+  secondWhite: '#fbfbfb',
 
   green: '#009CA3',
 
