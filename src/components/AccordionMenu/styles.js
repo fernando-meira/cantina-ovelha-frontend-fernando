@@ -92,6 +92,11 @@ export const ItemRestaurant = styled.section`
 
   background: ${colors.white};
   box-shadow: 0px 4px 8px ${colors.shadow};
+  transition: transform 0.2s;
+
+  :hover {
+    transform: scale(1.04);
+  }
 
   ${media.lessThan('1280px')`
     width: ${pxToRem(384)};
