@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from '../../themes/assets/images/vegan-restaurant-logo-design_1438-10.png';
@@ -6,7 +6,7 @@ import logo from '../../themes/assets/images/vegan-restaurant-logo-design_1438-1
 import { Container, OpenOrClosed } from './styles';
 
 export default function RestaurantList({ restaurants }) {
-  const [address, setAddress] = useState('');
+  // const [address, setAddress] = useState('');
 
   // const { number, street, district, city, state } = data.address[0];
 
