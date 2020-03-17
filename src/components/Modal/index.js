@@ -6,10 +6,10 @@ import { Container } from './styles';
 
 import pic from '../../themes/assets/images/prato-de-restaurante-vegetariano-modal.png';
 
-export default function Modal({ modalIsOpen, setIsOpen }) {
+export default function Modal({ isOpen, onRequestClose }) {
   return (
-    <Container isOpen={modalIsOpen} onRequestClose={() => setIsOpen(false)}>
-      <button type="button" onClick={() => setIsOpen(false)}>
+    <Container isOpen={isOpen} onRequestClose={() => onRequestClose()}>
+      <button type="button" onClick={() => onRequestClose()}>
         <IoMdClose />
       </button>
 

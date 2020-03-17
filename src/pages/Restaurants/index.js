@@ -14,7 +14,6 @@ import { Container, TopContainers, LateralBlock } from './styles';
 export default function Restaurants() {
   const [modalIsOpen, setIsOpen] = useState(false);
   function openModal() {
-    console.log('Chamou');
     setIsOpen(true);
   }
 
