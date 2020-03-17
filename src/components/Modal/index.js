@@ -1,60 +1,41 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Modal from 'react-modal';
+import { GoDash, GoPlus } from 'react-icons/go';
+import { IoMdClose } from 'react-icons/io';
 
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-  },
-};
+import { Container } from './styles';
 
-// Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
-Modal.setAppElement('#yourAppElement');
+import pic from '../../themes/assets/images/prato-de-restaurante-vegetariano-modal.png';
 
-function App() {
-  let subtitle;
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-  function openModal() {
-    setIsOpen(true);
-  }
-
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
-  }
-
-  function closeModal() {
-    setIsOpen(false);
-  }
-
+export default function Modal({ modalIsOpen, setIsOpen }) {
   return (
-    <div>
-      <button onClick={openModal}>Open Modal</button>
-      <Modal
-        isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <h2 ref={_subtitle => (subtitle = _subtitle)}>Hello</h2>
-        <button onClick={closeModal}>close</button>
-        <div>I am a modal</div>
-        <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
-        </form>
-      </Modal>
-    </div>
+    <Container isOpen={modalIsOpen} onRequestClose={() => setIsOpen(false)}>
+      <button type="button" onClick={() => setIsOpen(false)}>
+        <IoMdClose />
+      </button>
+
+      <img src={pic} alt="pic" />
+
+      <h1>Nome do Prato</h1>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <span>R$ 19,90</span>
+
+      <hr />
+
+      <div>
+        <GoDash />
+        1
+        <GoPlus />
+      </div>
+
+      <div>
+        <strong>Adicionar</strong>
+        <p>R$ 19,00</p>
+      </div>
+    </Container>
   );
 }
-
-ReactDOM.render(<App />, appElement);
