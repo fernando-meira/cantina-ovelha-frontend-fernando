@@ -5,3 +5,5 @@ const api = axios.create({
 });
 
 export default api;
+
+// http://162.243.144.62:4747/restaurants

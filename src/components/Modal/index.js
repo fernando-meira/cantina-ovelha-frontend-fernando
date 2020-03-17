@@ -2,22 +2,29 @@ import React, { useState, useEffect } from 'react';
 import { GoDash, GoPlus } from 'react-icons/go';
 import { IoMdClose } from 'react-icons/io';
 
+import { formatPrice } from '../../functions';
+
 import { Container, HeaderModal, BodyModal, FooterModal } from './styles';
 
 import pic from '../../themes/assets/images/prato-de-restaurante-vegetariano-modal.png';
 
 export default function Modal({ isOpen, onRequestClose }) {
-  const [count, setCount] = useState(1);
+  const [quantity, setQuantity] = useState(1);
+  const valor = 20;
+  const [total, setTotal] = useState(formatPrice(valor));
 
-  const changeCount = type => {
-    if (type === 'more' && count > 0) {
-      setCount(count + 1);
+  function changeQuantity(quantity, value) {
+    if (quantity > 0) {
+      setQuantity(quantity + value);
     }
+  }
 
-    if (type === 'less' && count > 1) {
-      setCount(count - 1);
+  useEffect(() => {
+    if (quantity === 0) {
+      setQuantity(1);
     }
-  };
+    setTotal(formatPrice(quantity * valor));
+  }, [quantity]);
 
   return (
     <Container isOpen={isOpen} onRequestClose={() => onRequestClose()}>
@@ -46,17 +53,17 @@ export default function Modal({ isOpen, onRequestClose }) {
 
       <FooterModal>
         <div className="QuantityOfProducts">
-          <button type="button" onClick={() => changeCount('less')}>
+          <button type="button" onClick={() => changeQuantity(quantity, -1)}>
             <GoDash />
           </button>
-          {count}
-          <button type="button" onClick={() => changeCount('more')}>
+          {quantity}
+          <button type="button" onClick={() => changeQuantity(quantity, +1)}>
             <GoPlus />
           </button>
         </div>
 
         <div className="TotalProducts">
-          <p>R$ 19,00</p>
+          <p>{total}</p>
         </div>
       </FooterModal>
     </Container>
