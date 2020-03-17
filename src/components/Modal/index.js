@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { GoDash, GoPlus } from 'react-icons/go';
 import { IoMdClose } from 'react-icons/io';
 
@@ -6,7 +6,19 @@ import { Container, HeaderModal, BodyModal, FooterModal } from './styles';
 
 import pic from '../../themes/assets/images/prato-de-restaurante-vegetariano-modal.png';
 
-export default function Modal({ isOpen, onRequestClose, quantityProducts }) {
+export default function Modal({ isOpen, onRequestClose }) {
+  const [count, setCount] = useState(1);
+
+  const changeCount = type => {
+    if (type === 'more' && count > 0) {
+      setCount(count + 1);
+    }
+
+    if (type === 'less' && count > 1) {
+      setCount(count - 1);
+    }
+  };
+
   return (
     <Container isOpen={isOpen} onRequestClose={() => onRequestClose()}>
       <HeaderModal>
@@ -34,11 +46,11 @@ export default function Modal({ isOpen, onRequestClose, quantityProducts }) {
 
       <FooterModal>
         <div className="QuantityOfProducts">
-          <button type="button">
+          <button type="button" onClick={() => changeCount('less')}>
             <GoDash />
           </button>
-          {quantityProducts}
-          <button type="button">
+          {count}
+          <button type="button" onClick={() => changeCount('more')}>
             <GoPlus />
           </button>
         </div>
