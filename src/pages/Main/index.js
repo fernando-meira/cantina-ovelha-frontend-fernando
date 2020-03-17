@@ -23,17 +23,13 @@ export default function Main() {
     fetchRestaurants();
   }, []);
 
-  useEffect(() => {
-    console.log(restaurants);
-  }, [restaurants]);
-
   return (
     <>
       <Header />
       <Container>
         <TopMessage />
         <Search text="Buscar estabelecimento" />
-        <RestaurantList />
+        <RestaurantList restaurants={restaurants} />
       </Container>
     </>
   );
