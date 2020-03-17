@@ -33,9 +33,11 @@ export default function AccordionMenu() {
                 {category.products.map(product => (
                   <ItemRestaurant key={product.id}>
                     <img src={lunch} alt={product.name} />
+
                     <div className="PlateDetails">
                       <div className="TopDetails">
                         <strong>{product.name}</strong>
+
                         <PromoCard>
                           <FaAward />
 
@@ -48,6 +50,7 @@ export default function AccordionMenu() {
 
                       <div className="ProductValues">
                         <span>{formatPrice(product.promotionalValue)}</span>
+
                         <p>{formatPrice(product.value)}</p>
                       </div>
                     </div>
