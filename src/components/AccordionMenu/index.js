@@ -14,7 +14,7 @@ import lunch from '../../themes/assets/images/prato-de-restaurante-vegetariano@2
 import mock from './dataMock';
 import { Container, ItemRestaurant, PromoCard } from './styles';
 
-export default function AccordionMenu() {
+export default function AccordionMenu({ openModal }) {
   const data = mock;
 
   return (
@@ -31,7 +31,7 @@ export default function AccordionMenu() {
             <AccordionItemPanel>
               <div className="Panel">
                 {category.products.map(product => (
-                  <ItemRestaurant key={product.id}>
+                  <ItemRestaurant key={product.id} onClick={() => openModal()}>
                     <img src={lunch} alt={product.name} />
 
                     <div className="PlateDetails">

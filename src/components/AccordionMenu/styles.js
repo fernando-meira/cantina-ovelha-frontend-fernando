@@ -9,7 +9,7 @@ export const Container = styled.div`
   margin-bottom: ${pxToRem(160)};
 
   .accordion {
-    border-radius: 2px;
+    border-radius: ${pxToRem(2)};
   }
 
   /* .accordion__item + .accordion__item {
@@ -21,15 +21,17 @@ export const Container = styled.div`
     border: none;
     padding: ${pxToRem(18)};
 
-    color: #444;
     cursor: pointer;
     text-align: left;
-    background-color: #f4f4f4;
+    color: ${colors.dark};
+    background-color: ${colors.white};
 }
 
 .accordion__button:hover {
   background-color: ${colors.lighterGray};
 }
+
+
 
 .accordion__button:before {
   content: '';
@@ -78,7 +80,6 @@ export const Container = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
 `;
 
 export const ItemRestaurant = styled.section`
@@ -91,6 +92,11 @@ export const ItemRestaurant = styled.section`
 
   background: ${colors.white};
   box-shadow: 0px 4px 8px ${colors.shadow};
+  transition: transform 0.2s;
+
+  :hover {
+    transform: scale(1.04);
+  }
 
   ${media.lessThan('1280px')`
     width: ${pxToRem(384)};
