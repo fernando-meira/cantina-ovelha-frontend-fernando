@@ -13,6 +13,8 @@ import { Container, TopContainers, LateralBlock } from './styles';
 
 export default function Restaurants() {
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [quantityProducts, setProducts] = useState(10);
+
   function openModal() {
     setIsOpen(true);
   }
@@ -28,7 +30,11 @@ export default function Restaurants() {
         <TopContainers>
           <RestaurantDetails />
           <Search searchStyle="modified" text="Buscar no cardápio" />
-          <Modal isOpen={modalIsOpen} onRequestClose={closeModal} />
+          <Modal
+            isOpen={modalIsOpen}
+            onRequestClose={closeModal}
+            quantityProducts={quantityProducts}
+          />
           <AccordionMenu openModal={openModal} />
         </TopContainers>
         <LateralBlock />
