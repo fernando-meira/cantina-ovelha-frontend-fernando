@@ -28,10 +28,6 @@ export const Container = styled.button`
     height: ${pxToRem(32)};
   `}
 
-  ${media.lessThan('small')`
-    display: none;
-  `}
-
   svg {
     color: ${colors.green};
     font-size: ${pxToRem(24)};

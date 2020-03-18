@@ -5,17 +5,17 @@ import { Container, SubmitButton } from './styles';
 
 export default function Search({
   searchStyle,
-  text,
+  typeOfSearch,
   searchRestaurant,
   setSearchRestaurant,
 }) {
   return (
     <Container searchStyle={searchStyle}>
-      <div className="label">{text}</div>
+      <div className="label">{typeOfSearch}</div>
 
       <input
         type="text"
-        placeholder={text}
+        placeholder={typeOfSearch}
         value={searchRestaurant}
         onChange={event => setSearchRestaurant(event.target.value)}
       />

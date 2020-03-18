@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import api from '../../services/api';
 
 import { Header, Search, RestaurantList, TopMessage } from '../../components';
+import { filterItems } from '../../functions';
 
 import { Container } from './styles';
 
@@ -26,8 +27,18 @@ export default function Main() {
     fetchRestaurants();
   }, []);
 
-  console.log('AllRestaurants', allRestaurants);
-  console.log('searchRestaurants', searchRestaurant);
+  const handleSearch = useCallback(() => {
+    const filteredRestaurants = filterItems({
+      allItems: allRestaurants,
+      searchText: searchRestaurant,
+    });
+
+    return setRestaurants(filteredRestaurants);
+  });
+
+  useEffect(() => {
+    handleSearch();
+  }, [searchRestaurant]);
 
   return (
     <>
@@ -35,7 +46,7 @@ export default function Main() {
       <Container>
         <TopMessage />
         <Search
-          text="Buscar estabelecimento"
+          typeOfSearch="Buscar estabelecimento"
           searchRestaurant={searchRestaurant}
           setSearchRestaurant={setSearchRestaurant}
         />

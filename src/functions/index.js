@@ -1,4 +1,5 @@
 import pxToRem from './pxToRem';
+import filterItems from './filterItems';
 import { formatPrice } from './convertValues';
 
-export { pxToRem, formatPrice };
+export { pxToRem, filterItems, formatPrice };
