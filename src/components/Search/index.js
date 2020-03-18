@@ -9,7 +9,6 @@ export default function Search({
   searchRestaurant,
   setSearchRestaurant,
 }) {
-  console.log('Procura de Restaurantes', searchRestaurant);
   return (
     <Container searchStyle={searchStyle}>
       <div className="label">{text}</div>

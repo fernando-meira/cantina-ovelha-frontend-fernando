@@ -27,6 +27,7 @@ export default function Main() {
   }, []);
 
   console.log('AllRestaurants', allRestaurants);
+  console.log('searchRestaurants', searchRestaurant);
 
   return (
     <>

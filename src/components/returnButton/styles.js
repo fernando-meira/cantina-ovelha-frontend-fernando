@@ -5,7 +5,7 @@ import { pxToRem } from '../../functions';
 import { colors } from '../../themes';
 
 export const Container = styled.button`
-  position: relative;
+  /* position: relative; */
   /* top: ${pxToRem(850)}; */
 
   border: none;
@@ -21,8 +21,8 @@ export const Container = styled.button`
   background: ${colors.secondWhite};
 
   ${media.lessThan('1300px')`
-    top: calc(100vh - 10%);
-    left: calc(100vh - 50%);
+    /* top: calc(100vh - 10%);
+    left: calc(100vh - 50%); */
 
     width: ${pxToRem(32)};
     height: ${pxToRem(32)};
