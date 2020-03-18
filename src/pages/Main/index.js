@@ -8,6 +8,7 @@ import { Container } from './styles';
 
 export default function Main() {
   const [restaurants, setRestaurants] = useState([]);
+  const [allRestaurants, setAllRestaurants] = useState([]);
 
   useEffect(() => {
     async function fetchRestaurants() {
@@ -15,6 +16,7 @@ export default function Main() {
         const { data } = await api.get('restaurants');
 
         setRestaurants(data);
+        setAllRestaurants(data);
       } catch (error) {
         console.log('Error', error.message);
       }
@@ -22,6 +24,8 @@ export default function Main() {
 
     fetchRestaurants();
   }, []);
+
+  console.log('AllRestaurants', allRestaurants);
 
   return (
     <>
