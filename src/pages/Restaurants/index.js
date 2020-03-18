@@ -26,7 +26,7 @@ export default function Restaurants() {
       <Container>
         <TopContainers>
           <RestaurantDetails />
-          <Search searchStyle="modified" text="Buscar no cardápio" />
+          <Search searchStyle="modified" typeOfSearch="Buscar no cardápio" />
           <Modal isOpen={modalIsOpen} onRequestClose={closeModal} />
           <AccordionMenu openModal={openModal} />
         </TopContainers>

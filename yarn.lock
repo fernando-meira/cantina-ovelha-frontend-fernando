@@ -9021,6 +9021,11 @@ react-lifecycles-compat@^3.0.0:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-loading-io@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/react-loading-io/-/react-loading-io-2.2.1.tgz#a5df8f469d27858be33cc1edb6ba951347ae837d"
+  integrity sha512-EM8sCmW1fNjtDZEIakwC3gWpsm27+K0UIzh8rHX6j4X0an1xXnyHjwJFe9gSpPLP57QCXZcs5aba8oNVj4L+wg==
+
 react-modal@^3.11.2:
   version "3.11.2"
   resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.11.2.tgz#bad911976d4add31aa30dba8a41d11e21c4ac8a4"
