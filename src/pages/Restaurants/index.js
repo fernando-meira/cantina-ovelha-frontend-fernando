@@ -4,7 +4,6 @@ import {
   Modal,
   Header,
   Search,
-  ReturnButton,
   AccordionMenu,
   RestaurantDetails,
 } from '../../components';
@@ -25,7 +24,6 @@ export default function Restaurants() {
     <>
       <Header />
       <Container>
-        <ReturnButton />
         <TopContainers>
           <RestaurantDetails />
           <Search searchStyle="modified" text="Buscar no cardápio" />

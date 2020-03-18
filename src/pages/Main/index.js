@@ -9,6 +9,7 @@ import { Container } from './styles';
 export default function Main() {
   const [restaurants, setRestaurants] = useState([]);
   const [allRestaurants, setAllRestaurants] = useState([]);
+  const [searchRestaurant, setSearchRestaurant] = useState('');
 
   useEffect(() => {
     async function fetchRestaurants() {
@@ -32,7 +33,11 @@ export default function Main() {
       <Header />
       <Container>
         <TopMessage />
-        <Search text="Buscar estabelecimento" />
+        <Search
+          text="Buscar estabelecimento"
+          searchRestaurant={searchRestaurant}
+          setSearchRestaurant={setSearchRestaurant}
+        />
         <RestaurantList restaurants={restaurants} />
       </Container>
     </>

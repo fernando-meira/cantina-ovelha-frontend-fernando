@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { IoMdArrowRoundBack } from 'react-icons/io';
+import { FaHome } from 'react-icons/fa';
 
 import { Container } from './styles';
 
@@ -8,7 +8,7 @@ export default function ReturnButton() {
   return (
     <Link to="/">
       <Container>
-        <IoMdArrowRoundBack />
+        <FaHome />
       </Container>
     </Link>
   );
