@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Spin } from 'react-loading-io';
 
 import api from '../../services/api';
@@ -40,20 +40,21 @@ export default function Main() {
     fetchRestaurants();
   }, []);
 
-  const handleSearch = useCallback(() => {
-    const filteredRestaurants = filterItems({
-      allItems: allRestaurants,
-      searchText: searchRestaurant,
-    });
+  function handleSearch() {
+    const filteredRestaurants = filterItems(
+      {
+        allItems: allRestaurants,
+        searchText: searchRestaurant,
+      },
+      [allRestaurants, searchRestaurant]
+    );
 
     return setRestaurants(filteredRestaurants);
-  });
+  }
 
   useEffect(() => {
     handleSearch();
   }, [searchRestaurant]);
-
-  console.log('Loading', loading);
 
   return (
     <>

@@ -1,12 +1,14 @@
 import React from 'react';
-import { Ball } from 'react-loading-io';
+import { Eclipse } from 'react-loading-io';
+
+import { colors } from '../../themes';
 
 import { Container } from './styles';
 
 export default function Loading() {
   return (
     <Container>
-      <Ball />
+      <Eclipse color={colors.green} size={100} />
     </Container>
   );
 }
