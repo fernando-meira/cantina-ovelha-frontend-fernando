@@ -1,6 +1,7 @@
 import Modal from './Modal';
 import Header from './Header';
 import Search from './Search';
+import Loading from './Loading';
 import TopMessage from './TopMessage';
 import ReturnButton from './ReturnButton';
 import AccordionMenu from './AccordionMenu';
@@ -11,6 +12,7 @@ export {
   Modal,
   Header,
   Search,
+  Loading,
   TopMessage,
   ReturnButton,
   AccordionMenu,

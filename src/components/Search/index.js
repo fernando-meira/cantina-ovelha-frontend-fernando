@@ -3,12 +3,22 @@ import { FaSearch } from 'react-icons/fa';
 
 import { Container, SubmitButton } from './styles';
 
-export default function Search({ searchStyle, text }) {
+export default function Search({
+  searchStyle,
+  typeOfSearch,
+  searchRestaurant,
+  setSearchRestaurant,
+}) {
   return (
     <Container searchStyle={searchStyle}>
-      <div className="label">{text}</div>
+      <div className="label">{typeOfSearch}</div>
 
-      <input type="text" id="Search" name="Search" placeholder={text} />
+      <input
+        type="text"
+        placeholder={typeOfSearch}
+        value={searchRestaurant}
+        onChange={event => setSearchRestaurant(event.target.value)}
+      />
 
       <div>
         <SubmitButton type="button">
