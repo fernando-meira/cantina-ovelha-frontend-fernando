@@ -12,7 +12,10 @@ export default function RestaurantList({ restaurants }) {
       {restaurants.map(restaurant => (
         <Link to="/restaurants" key={restaurant.id_restaurant}>
           <li>
-            <img src={logo} alt={restaurant.name} />
+            <img
+              src={`${restaurant.id_picture ? restaurant.picture.url : logo} `}
+              alt={restaurant.name}
+            />
             {console.log(restaurant.picture)}
             <div>
               <strong>{restaurant.name}</strong>
