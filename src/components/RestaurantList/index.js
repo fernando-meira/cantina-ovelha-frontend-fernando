@@ -13,7 +13,6 @@ export default function RestaurantList({ restaurants }) {
         <Link to="/restaurants" key={restaurant.id_restaurant}>
           <li>
             <img src={logo} alt={restaurant.name} />
-            {console.log(restaurant.picture)}
             <div>
               <strong>{restaurant.name}</strong>
               {restaurant.address.map(add => (
@@ -24,7 +23,7 @@ export default function RestaurantList({ restaurants }) {
             </div>
 
             <OpenOrClosed status={restaurant.schedule[0].isOpen}>
-              {restaurant.open ? <p>Aberto agora</p> : <p>Fechado</p>}
+              {restaurant.isOpen ? <p>Aberto agora</p> : <p>Fechado</p>}
             </OpenOrClosed>
           </li>
         </Link>
