@@ -38,6 +38,7 @@ export const Container = styled.ul`
 
     margin: 20px 34px;
     width: ${pxToRem(367)};
+    min-height:${pxToRem(115)};
     padding: ${pxToRem(8)};
     border-radius: ${pxToRem(4)};
 

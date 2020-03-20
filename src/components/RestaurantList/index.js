@@ -13,7 +13,11 @@ export default function RestaurantList({ restaurants }) {
         <Link to="/restaurants" key={restaurant.id_restaurant}>
           <li>
             <img
-              src={`${restaurant.id_picture ? restaurant.picture.url : logo} `}
+              src={`${
+                restaurant.id_picture
+                  ? 'http://' + restaurant.picture.url
+                  : logo
+              }`}
               alt={restaurant.name}
             />
             {console.log(restaurant.picture)}
