@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { GoDash, GoPlus } from 'react-icons/go';
 import { IoMdClose } from 'react-icons/io';
 
@@ -69,3 +70,8 @@ export default function Modal({ isOpen, onRequestClose }) {
     </Container>
   );
 }
+
+Modal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onRequestClose: PropTypes.func.isRequired,
+};

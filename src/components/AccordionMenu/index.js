@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaAward } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 import {
   Accordion,
   AccordionItem,
@@ -64,3 +65,7 @@ export default function AccordionMenu({ openModal }) {
     </Container>
   );
 }
+
+AccordionMenu.propTypes = {
+  openModal: PropTypes.bool.isRequired,
+};
