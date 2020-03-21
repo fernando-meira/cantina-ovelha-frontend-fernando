@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import logo from '../../themes/assets/images/vegan-restaurant-logo-design_1438-10.png';
@@ -31,3 +32,7 @@ export default function RestaurantList({ restaurants }) {
     </Container>
   );
 }
+
+RestaurantList.propTypes = {
+  restaurants: PropTypes.array.isRequired,
+};

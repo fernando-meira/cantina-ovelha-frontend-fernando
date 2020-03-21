@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FaSearch } from 'react-icons/fa';
 
 import { Container, SubmitButton } from './styles';
@@ -28,3 +29,14 @@ export default function Search({
     </Container>
   );
 }
+
+Search.defaultProps = {
+  typeOfSearch: 'Buscar estabelecimento',
+};
+
+Search.propTypes = {
+  searchStyle: PropTypes.string,
+  typeOfSearch: PropTypes.string,
+  searchRestaurant: PropTypes.string,
+  setSearchRestaurant: PropTypes.func,
+};
