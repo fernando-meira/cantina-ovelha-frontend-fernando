@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
@@ -8,12 +8,19 @@ import { Container, OpenOrClosed } from './styles';
 
 export default function RestaurantList({ restaurants }) {
   console.log('Restaurantes', restaurants);
+
+  useEffect(() => {
+    console.log('Restaurants', restaurants);
+  }, [restaurants]);
   return (
     <Container>
       {restaurants.map(restaurant => (
         <Link to="/restaurants" key={restaurant.id_restaurant}>
           <li>
-            <img src={logo} alt={restaurant.name} />
+            <img
+              src={restaurant.id_picture ? restaurant.picture.url : logo}
+              alt={restaurant.name}
+            />
             <div>
               <strong>{restaurant.name}</strong>
               {restaurant.address.map(add => (
@@ -34,5 +41,5 @@ export default function RestaurantList({ restaurants }) {
 }
 
 RestaurantList.propTypes = {
-  restaurants: PropTypes.array.isRequired,
+  restaurants: PropTypes.arrayOf.isRequired,
 };
