@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 import {
   Modal,
@@ -12,8 +13,26 @@ import api from '../../services/api';
 
 import { Container, TopContainers, LateralBlock } from './styles';
 
-export default function Restaurants() {
+function Restaurants() {
+  const { id } = useParams();
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [restaurant, setRestaurant] = useState({});
+
+  useEffect(() => {
+    async function fetchRestaurant() {
+      try {
+        const { data } = await api.get(`restaurants/${id}`);
+
+        setRestaurant(data);
+      } catch (error) {
+        console.log('Erro', error.message);
+      }
+    }
+
+    fetchRestaurant();
+  }, []);
+
+  console.log('Restaurant', restaurant);
 
   function openModal() {
     setIsOpen(true);
@@ -22,6 +41,7 @@ export default function Restaurants() {
   function closeModal() {
     setIsOpen(false);
   }
+
   return (
     <>
       <Header />
@@ -37,3 +57,5 @@ export default function Restaurants() {
     </>
   );
 }
+
+export default Restaurants;

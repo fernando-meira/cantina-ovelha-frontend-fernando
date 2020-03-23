@@ -20,7 +20,7 @@ export default function Main() {
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [searchRestaurant, setSearchRestaurant] = useState('');
 
-  console.log('Search Restaurant', searchRestaurant);
+  // console.log('Search Restaurant', searchRestaurant);
 
   useEffect(() => {
     async function fetchRestaurants() {

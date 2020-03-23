@@ -67,5 +67,5 @@ export default function AccordionMenu({ openModal }) {
 }
 
 AccordionMenu.propTypes = {
-  openModal: PropTypes.bool.isRequired,
+  openModal: PropTypes.func.isRequired,
 };

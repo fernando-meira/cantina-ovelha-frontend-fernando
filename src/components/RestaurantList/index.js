@@ -7,20 +7,17 @@ import logo from '../../themes/assets/images/vegan-restaurant-logo-design_1438-1
 import { Container, OpenOrClosed } from './styles';
 
 export default function RestaurantList({ restaurants }) {
-  console.log('Restaurantes', restaurants);
+  // console.log('Restaurantes', restaurants);
 
-  useEffect(() => {
-    console.log('Restaurants', restaurants);
-  }, [restaurants]);
   return (
     <Container>
       {restaurants.map(restaurant => (
-        <Link to="/restaurants" key={restaurant.id_restaurant}>
+        <Link
+          to={`/restaurants/${restaurant.id_restaurant}`}
+          key={restaurant.id_restaurant}
+        >
           <li>
-            <img
-              src={restaurant.id_picture ? restaurant.picture.url : logo}
-              alt={restaurant.name}
-            />
+            <img src={logo} alt={restaurant.name} />
             <div>
               <strong>{restaurant.name}</strong>
               {restaurant.address.map(add => (
