@@ -42,5 +42,5 @@ export default function RestaurantList({ restaurants }) {
 }
 
 RestaurantList.propTypes = {
-  restaurants: PropTypes.arrayOf.isRequired,
+  restaurants: PropTypes.array.isRequired,
 };

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import api from '../../services/api';
+
 import {
   Modal,
   Header,
@@ -8,8 +10,6 @@ import {
   AccordionMenu,
   RestaurantDetails,
 } from '../../components';
-
-import api from '../../services/api';
 
 import { Container, TopContainers, LateralBlock } from './styles';
 
@@ -28,11 +28,8 @@ function Restaurants() {
         console.log('Erro', error.message);
       }
     }
-
     fetchRestaurant();
   }, []);
-
-  console.log('Restaurant', restaurant);
 
   function openModal() {
     setIsOpen(true);
@@ -47,7 +44,7 @@ function Restaurants() {
       <Header />
       <Container>
         <TopContainers>
-          <RestaurantDetails />
+          <RestaurantDetails restaurant={restaurant} />
           <Search searchStyle="modified" typeOfSearch="Buscar no cardápio" />
           <Modal isOpen={modalIsOpen} onRequestClose={closeModal} />
           <AccordionMenu openModal={openModal} />

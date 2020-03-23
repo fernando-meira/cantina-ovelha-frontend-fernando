@@ -1,15 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import logo from '../../themes/assets/images/vegan-restaurant-logo-design_1438-10@2x.png';
 import { Container, Details } from './styles';
 
-export default function RestaurantDetails() {
+export default function RestaurantDetails({ restaurant }) {
+  console.log('Data', restaurant);
+
   return (
     <Container>
       <img src={logo} alt="lg-restaurant" />
 
       <Details>
-        <strong>Nome do Restaurante</strong>
+        <strong>{restaurant.name}</strong>
 
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -31,3 +34,7 @@ export default function RestaurantDetails() {
     </Container>
   );
 }
+
+RestaurantDetails.protoTypes = {
+  restaurant: PropTypes.object.isRequired,
+};
