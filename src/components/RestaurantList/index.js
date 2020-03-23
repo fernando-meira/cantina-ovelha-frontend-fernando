@@ -31,7 +31,11 @@ export default function RestaurantList({ restaurants }) {
             </div>
 
             <OpenOrClosed status={restaurant.schedule[0].isOpen}>
-              {restaurant.isOpen ? <p>Aberto agora</p> : <p>Fechado</p>}
+              {restaurant.schedule[0].isOpen ? (
+                <p>Aberto agora</p>
+              ) : (
+                <p>Fechado</p>
+              )}
             </OpenOrClosed>
           </li>
         </Link>
