@@ -38,8 +38,7 @@ export const Container = styled.ul`
 
     margin: 20px 34px;
     width: ${pxToRem(367)};
-    min-height:${pxToRem(115)};
-    padding: ${pxToRem(8)};
+    min-height:${pxToRem(100)};
     border-radius: ${pxToRem(4)};
 
     display: flex;
@@ -52,16 +51,6 @@ export const Container = styled.ul`
     ${media.lessThan('medium')`
       width: ${pxToRem(300)};
     `}
-
-    ${media.lessThan('small')`
-    `}
-
-    img {
-      align-self: center;
-
-      max-width: ${pxToRem(100)};
-      max-height: ${pxToRem(100)};
-    }
 
     div {
       display: flex;
@@ -85,9 +74,9 @@ export const OpenOrClosed = styled.div`
   top: ${pxToRem(-24)};
   right: ${pxToRem(-24)};
 
+  border-radius: 50%;
   width: ${pxToRem(48)};
   height: ${pxToRem(48)};
-  border-radius: 50%;
 
   text-align: center;
   justify-content: center;
@@ -113,4 +102,15 @@ export const OpenOrClosed = styled.div`
       font-size: 6px;
     `}
   }
+`;
+
+export const LogoRestaurant = styled.div`
+  width: ${pxToRem(100)};
+  min-width: ${pxToRem(100)};
+  min-height: ${pxToRem(100)};
+  margin-right: ${pxToRem(20)};
+
+  background: url(${({ backgroundImage }) => backgroundImage}) no-repeat;
+  background-size: cover;
+  background-position: center;
 `;

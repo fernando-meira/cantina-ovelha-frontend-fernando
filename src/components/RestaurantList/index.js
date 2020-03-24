@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 import logo from '../../themes/assets/images/vegan-restaurant-logo-design_1438-10.png';
 
-import { Container, OpenOrClosed } from './styles';
+import { Container, LogoRestaurant, OpenOrClosed } from './styles';
 
 export default function RestaurantList({ restaurants }) {
-  // console.log('Restaurantes', restaurants);
+  console.log('Restaurantes', restaurants);
 
   return (
     <Container>
@@ -17,7 +17,12 @@ export default function RestaurantList({ restaurants }) {
           key={restaurant.id_restaurant}
         >
           <li>
-            <img src={logo} alt={restaurant.name} />
+            <LogoRestaurant
+              backgroundImage={
+                restaurant.id_picture ? restaurant.picture.url : logo
+              }
+            />
+
             <div>
               <strong>{restaurant.name}</strong>
               {restaurant.address.map(add => (
