@@ -48,7 +48,7 @@ export const Container = styled.ul`
     box-shadow: 0px 2px 4px ${colors.shadow};
     transition: transform 0.2s;
 
-    ${media.lessThan('medium')`
+    ${media.lessThan('small')`
       width: ${pxToRem(300)};
     `}
 
@@ -109,6 +109,8 @@ export const LogoRestaurant = styled.div`
   min-width: ${pxToRem(100)};
   min-height: ${pxToRem(100)};
   margin-right: ${pxToRem(20)};
+  border-top-left-radius: ${pxToRem(4)};
+  border-bottom-left-radius: ${pxToRem(4)};
 
   background: url(${({ backgroundImage }) => backgroundImage}) no-repeat;
   background-size: cover;
