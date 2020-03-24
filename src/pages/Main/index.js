@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Spin } from 'react-loading-io';
 
 import api from '../../services/api';
 
@@ -62,9 +61,7 @@ export default function Main() {
     <>
       <Header />
       {loading ? (
-        <Loading>
-          <Spin />
-        </Loading>
+        <Loading />
       ) : (
         <Container>
           <TopMessage />

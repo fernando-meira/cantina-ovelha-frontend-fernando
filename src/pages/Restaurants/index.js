@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Spin } from 'react-loading-io';
 
 import api from '../../services/api';
 
@@ -7,6 +8,7 @@ import {
   Modal,
   Header,
   Search,
+  Loading,
   AccordionMenu,
   RestaurantDetails,
 } from '../../components';
@@ -15,17 +17,22 @@ import { Container, TopContainers, LateralBlock } from './styles';
 
 function Restaurants() {
   const { id } = useParams();
+  const [loading, setLoading] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [restaurant, setRestaurant] = useState({});
 
   useEffect(() => {
     async function fetchRestaurant() {
+      setLoading(true);
       try {
         const { data } = await api.get(`restaurants/${id}`);
 
         setRestaurant(data);
       } catch (error) {
         console.log('Erro', error.message);
+        setLoading(false);
+      } finally {
+        setLoading(false);
       }
     }
     fetchRestaurant();
@@ -42,15 +49,20 @@ function Restaurants() {
   return (
     <>
       <Header />
-      <Container>
-        <TopContainers>
-          <RestaurantDetails restaurant={restaurant} />
-          <Search searchStyle="modified" typeOfSearch="Buscar no cardápio" />
-          <Modal isOpen={modalIsOpen} onRequestClose={closeModal} />
-          <AccordionMenu openModal={openModal} />
-        </TopContainers>
-        <LateralBlock />
-      </Container>
+
+      {loading ? (
+        <Loading />
+      ) : (
+        <Container>
+          <TopContainers>
+            <RestaurantDetails restaurant={restaurant} />
+            <Search searchStyle="modified" typeOfSearch="Buscar no cardápio" />
+            <Modal isOpen={modalIsOpen} onRequestClose={closeModal} />
+            <AccordionMenu openModal={openModal} />
+          </TopContainers>
+          <LateralBlock />
+        </Container>
+      )}
     </>
   );
 }
