@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaAward } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import {
@@ -15,8 +15,10 @@ import lunch from '../../themes/assets/images/prato-de-restaurante-vegetariano@2
 import mock from './dataMock';
 import { Container, ItemRestaurant, PromoCard } from './styles';
 
-export default function AccordionMenu({ openModal }) {
+export default function AccordionMenu({ openModal, categories }) {
   const data = mock;
+
+  console.log('Categories:', categories);
 
   return (
     <Container>

@@ -20,6 +20,20 @@ function Restaurants() {
   const [loading, setLoading] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [restaurant, setRestaurant] = useState({});
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    async function fetchCategories() {
+      try {
+        const { data } = await api.get(`categories`);
+
+        setCategories(data);
+      } catch (error) {
+        console.log('Erro', error.message);
+      }
+    }
+    fetchCategories();
+  }, []);
 
   useEffect(() => {
     async function fetchRestaurant() {
@@ -58,7 +72,7 @@ function Restaurants() {
             <RestaurantDetails restaurant={restaurant} />
             <Search searchStyle="modified" typeOfSearch="Buscar no cardápio" />
             <Modal isOpen={modalIsOpen} onRequestClose={closeModal} />
-            <AccordionMenu openModal={openModal} />
+            <AccordionMenu openModal={openModal} categories={categories} />
           </TopContainers>
           <LateralBlock />
         </Container>

@@ -7,8 +7,6 @@ import { Container, Details, LogoRestaurant } from './styles';
 export default function RestaurantDetails({ restaurant }) {
   // console.log('Data', restaurant);
 
-  console.log('restaurant.address', restaurant.address);
-
   return (
     <Container>
       <LogoRestaurant
