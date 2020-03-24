@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Spin } from 'react-loading-io';
 
 import api from '../../services/api';
 
@@ -50,7 +49,7 @@ function Restaurants() {
       }
     }
     fetchRestaurant();
-  }, []);
+  }, [id]);
 
   function openModal() {
     setIsOpen(true);
