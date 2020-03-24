@@ -2,14 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import logo from '../../themes/assets/images/vegan-restaurant-logo-design_1438-10@2x.png';
-import { Container, Details } from './styles';
+import { Container, Details, LogoRestaurant } from './styles';
 
 export default function RestaurantDetails({ restaurant }) {
   console.log('Data', restaurant);
 
   return (
     <Container>
-      <img src={logo} alt="lg-restaurant" />
+      <LogoRestaurant
+        backgroundImage={restaurant.id_picture ? restaurant.picture.url : logo}
+      />
 
       <Details>
         <strong>{restaurant.name}</strong>

@@ -57,3 +57,15 @@ export const Details = styled.div`
     }
   }
 `;
+
+export const LogoRestaurant = styled.div`
+  width: ${pxToRem(145)};
+  height: ${pxToRem(145)};
+  margin-right: ${pxToRem(20)};
+  border-radius: ${pxToRem(4)};
+
+  background: transparent url(${({ backgroundImage }) => backgroundImage})
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+`;
