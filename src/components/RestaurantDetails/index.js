@@ -5,7 +5,9 @@ import logo from '../../themes/assets/images/vegan-restaurant-logo-design_1438-1
 import { Container, Details, LogoRestaurant } from './styles';
 
 export default function RestaurantDetails({ restaurant }) {
-  console.log('Data', restaurant);
+  // console.log('Data', restaurant);
+
+  console.log('restaurant.address', restaurant.address);
 
   return (
     <Container>
@@ -15,12 +17,12 @@ export default function RestaurantDetails({ restaurant }) {
 
       <Details>
         <strong>{restaurant.name}</strong>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-
+        {restaurant.address &&
+          restaurant.address.map(add => (
+            <p key={add.id_address}>{`${add.street}, ${
+              add.number === null ? 'S/N' : add.number
+            }, ${add.district}, ${add.city} - ${add.state}`}</p>
+          ))}
         <p className="Days">
           Segunda à Sexta: <span>11:30 às 15:00</span>
         </p>
