@@ -16,16 +16,22 @@ export const Container = styled.div`
     height: ${pxToRem(145)};
   }
 
+  ${media.lessThan('medium')`
+    flex-direction: column;
+  `}
+
   ${media.lessThan('small')`
     margin: ${pxToRem(16)} 0;
-
-    flex-direction: column;
   `}
 `;
 
 export const Details = styled.div`
   max-width: ${pxToRem(530)};
   margin-left: ${pxToRem(21)};
+
+  ${media.lessThan('medium')`
+    margin-left: 0;
+  `}
 
   ${media.lessThan('small')`
     display: flex;
@@ -68,4 +74,9 @@ export const LogoRestaurant = styled.div`
     no-repeat;
   background-size: cover;
   background-position: center;
+
+  ${media.lessThan('medium')`
+    margin-right: 0;
+    margin-bottom: ${pxToRem(20)};
+  `}
 `;

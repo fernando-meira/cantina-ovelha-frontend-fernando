@@ -7,6 +7,7 @@ import logo from '../../themes/assets/images/vegan-restaurant-logo-design_1438-1
 import { Container, LogoRestaurant, OpenOrClosed } from './styles';
 
 export default function RestaurantList({ restaurants }) {
+  console.log('Restaurant', restaurants);
   return (
     <Container>
       {restaurants.map(restaurant => (
