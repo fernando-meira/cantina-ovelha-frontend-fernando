@@ -38,5 +38,21 @@ export default function RestaurantDetails({ restaurant }) {
 }
 
 RestaurantDetails.protoTypes = {
-  restaurant: PropTypes.object.isRequired,
+  restaurant: PropTypes.shape({
+    id_picture: PropTypes.number,
+    picture: PropTypes.shape({
+      url: PropTypes.string,
+    }),
+    name: PropTypes.string,
+    address: PropTypes.arrayOf(
+      PropTypes.shape({
+        id_address: PropTypes.number,
+        street: PropTypes.string,
+        number: PropTypes.number,
+        district: PropTypes.string,
+        city: PropTypes.string,
+        state: PropTypes.string,
+      })
+    ),
+  }).isRequired,
 };
