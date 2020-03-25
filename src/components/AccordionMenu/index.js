@@ -10,14 +10,11 @@ import {
 } from 'react-accessible-accordion';
 
 import { formatPrice } from '../../functions';
-import lunch from '../../themes/assets/images/prato-de-restaurante-vegetariano@2x.png';
+import no_image from '../../themes/assets/images/no_image.png';
 
-import mock from './dataMock';
-import { Container, ItemRestaurant, PromoCard } from './styles';
+import { Container, ProductImage, ItemRestaurant, PromoCard } from './styles';
 
 export default function AccordionMenu({ openModal, categories }) {
-  const data = mock;
-
   console.log('Categories:', categories);
 
   return (
@@ -26,35 +23,39 @@ export default function AccordionMenu({ openModal, categories }) {
         allowMultipleExpanded={() => true}
         allowZeroExpanded={() => true}
       >
-        {data.map(category => (
-          <AccordionItem key={category.id}>
+        {categories.map(category => (
+          <AccordionItem key={category.id_category}>
             <AccordionItemHeading>
-              <AccordionItemButton>{category.type}</AccordionItemButton>
+              <AccordionItemButton>{category.description}</AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <div className="Panel">
-                {category.products.map(product => (
-                  <ItemRestaurant key={product.id} onClick={() => openModal()}>
-                    <img src={lunch} alt={product.name} />
-
+                {category.product.map(p => (
+                  <ItemRestaurant
+                    key={p.id_product}
+                    onClick={() => openModal()}
+                  >
+                    <ProductImage
+                      backgroundImage={p.picture ? p.picture.url : no_image}
+                    />
                     <div className="PlateDetails">
                       <div className="TopDetails">
-                        <strong>{product.name}</strong>
+                        <strong>{p.name}</strong>
 
                         <PromoCard>
                           <FaAward />
 
                           <p>
-                            Promo <span>{category.type}</span>
+                            Promo <span>{category.description}</span>
                           </p>
                         </PromoCard>
                       </div>
-                      <p>{product.description}</p>
+                      <p>{p.description}</p>
 
                       <div className="ProductValues">
-                        <span>{formatPrice(product.promotionalValue)}</span>
+                        <span>{formatPrice(100)}</span>
 
-                        <p>{formatPrice(product.value)}</p>
+                        <p>{formatPrice(100)}</p>
                       </div>
                     </div>
                   </ItemRestaurant>
@@ -70,4 +71,5 @@ export default function AccordionMenu({ openModal, categories }) {
 
 AccordionMenu.propTypes = {
   openModal: PropTypes.func.isRequired,
+  // categories: PropTypes.arrayOf,
 };
