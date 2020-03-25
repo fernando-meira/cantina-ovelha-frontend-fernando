@@ -14,9 +14,9 @@ export default function Modal({ isOpen, onRequestClose }) {
   const valor = 20;
   const [total, setTotal] = useState(formatPrice(valor));
 
-  function changeQuantity(quantity, value) {
+  function changeQuantity(quantityProducts, value) {
     if (quantity > 0) {
-      setQuantity(quantity + value);
+      setQuantity(quantityProducts + value);
     }
   }
 
