@@ -84,7 +84,7 @@ export const Container = styled.div`
 
 export const ItemRestaurant = styled.section`
   width: ${pxToRem(386)};
-  height: ${pxToRem(115)};
+  height: ${pxToRem(100)};
   margin-top: ${pxToRem(24)};
 
   display: flex;
@@ -206,4 +206,17 @@ export const PromoCard = styled.div`
 
     `}
   }
+`;
+
+export const ProductImage = styled.div`
+  width: ${pxToRem(100)};
+  min-width: ${pxToRem(100)};
+  min-height: ${pxToRem(100)};
+  margin-right: ${pxToRem(20)};
+  border-top-left-radius: ${pxToRem(4)};
+  border-bottom-left-radius: ${pxToRem(4)};
+
+  background: url(${({ backgroundImage }) => backgroundImage}) no-repeat;
+  background-size: cover;
+  background-position: center;
 `;
