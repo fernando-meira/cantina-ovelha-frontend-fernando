@@ -71,5 +71,15 @@ export default function AccordionMenu({ openModal, categories }) {
 
 AccordionMenu.propTypes = {
   openModal: PropTypes.func.isRequired,
-  // categories: PropTypes.arrayOf,
+  categories: PropTypes.shape({
+    id_category: PropTypes.number,
+    description: PropTypes.string,
+    product: PropTypes.shape({
+      id_product: PropTypes.number,
+      name: PropTypes.string,
+      picture: PropTypes.shape({
+        url: PropTypes.string,
+      }),
+    }),
+  }).isRequired,
 };
