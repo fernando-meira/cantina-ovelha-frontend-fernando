@@ -42,13 +42,15 @@ export default function AccordionMenu({ openModal, categories }) {
                       <div className="TopDetails">
                         <strong>{p.name}</strong>
 
-                        <PromoCard>
-                          <FaAward />
+                        {p.name.length > 10 && (
+                          <PromoCard>
+                            <FaAward />
 
-                          <p>
-                            Promo <span>{category.description}</span>
-                          </p>
-                        </PromoCard>
+                            <p>
+                              Promo <span>{category.description}</span>
+                            </p>
+                          </PromoCard>
+                        )}
                       </div>
                       <p>{p.description}</p>
 

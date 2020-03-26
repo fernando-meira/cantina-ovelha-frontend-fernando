@@ -130,7 +130,8 @@ export const ItemRestaurant = styled.section`
     justify-content: space-between;
 
     strong {
-      width: 100px;
+      max-width: ${pxToRem(200)};
+      margin-right: ${pxToRem(4)};
 
       overflow: hidden;
       white-space: nowrap;
@@ -212,7 +213,6 @@ export const ProductImage = styled.div`
   width: ${pxToRem(100)};
   min-width: ${pxToRem(100)};
   min-height: ${pxToRem(100)};
-  margin-right: ${pxToRem(20)};
   border-top-left-radius: ${pxToRem(4)};
   border-bottom-left-radius: ${pxToRem(4)};
 
