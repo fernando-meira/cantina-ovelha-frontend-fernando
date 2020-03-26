@@ -42,13 +42,15 @@ export default function AccordionMenu({ openModal, categories }) {
                       <div className="TopDetails">
                         <strong>{p.name}</strong>
 
-                        <PromoCard>
-                          <FaAward />
+                        {p.name.length > 10 && (
+                          <PromoCard>
+                            <FaAward />
 
-                          <p>
-                            Promo <span>{category.description}</span>
-                          </p>
-                        </PromoCard>
+                            <p>
+                              Promo <span>{category.description}</span>
+                            </p>
+                          </PromoCard>
+                        )}
                       </div>
                       <p>{p.description}</p>
 
@@ -71,5 +73,15 @@ export default function AccordionMenu({ openModal, categories }) {
 
 AccordionMenu.propTypes = {
   openModal: PropTypes.func.isRequired,
-  // categories: PropTypes.arrayOf,
+  categories: PropTypes.shape({
+    id_category: PropTypes.number,
+    description: PropTypes.string,
+    product: PropTypes.shape({
+      id_product: PropTypes.number,
+      name: PropTypes.string,
+      picture: PropTypes.shape({
+        url: PropTypes.string,
+      }),
+    }),
+  }).isRequired,
 };

@@ -70,7 +70,11 @@ function Restaurants() {
           <TopContainers>
             <RestaurantDetails restaurant={restaurant} />
             <Search searchStyle="modified" typeOfSearch="Buscar no cardápio" />
-            <Modal isOpen={modalIsOpen} onRequestClose={closeModal} />
+            <Modal
+              isOpen={modalIsOpen}
+              onRequestClose={closeModal}
+              categories={categories}
+            />
             <AccordionMenu openModal={openModal} categories={categories} />
           </TopContainers>
           <LateralBlock />

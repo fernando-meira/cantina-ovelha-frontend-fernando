@@ -9,7 +9,7 @@ import { Container, HeaderModal, BodyModal, FooterModal } from './styles';
 
 import pic from '../../themes/assets/images/prato-de-restaurante-vegetariano-modal.png';
 
-export default function Modal({ isOpen, onRequestClose }) {
+export default function Modal({ isOpen, onRequestClose, categories }) {
   const [quantity, setQuantity] = useState(1);
   const valor = 20;
   const [total, setTotal] = useState(formatPrice(valor));
