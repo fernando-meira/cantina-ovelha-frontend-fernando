@@ -42,7 +42,7 @@ export default function AccordionMenu({ openModal, categories }) {
                       <div className="TopDetails">
                         <strong>{p.name}</strong>
 
-                        {p.name.length > 10 && (
+                        {p.name.length < 10 && (
                           <PromoCard>
                             <FaAward />
 
