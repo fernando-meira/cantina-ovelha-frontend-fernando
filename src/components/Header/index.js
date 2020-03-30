@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ReturnButton } from '../';
+import { ReturnButton } from '..';
 
 import { Container } from './styles';
 

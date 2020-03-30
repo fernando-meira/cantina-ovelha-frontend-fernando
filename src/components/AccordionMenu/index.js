@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import {
   Accordion,
   AccordionItem,
-  AccordionItemHeading,
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
@@ -92,6 +91,18 @@ AccordionMenu.propTypes = {
       picture: PropTypes.shape({
         url: PropTypes.string,
       }),
+    }),
+  }).isRequired,
+  restaurant: PropTypes.shape({
+    products: PropTypes.shape({
+      id_product: PropTypes.string,
+      no_image: PropTypes.string,
+      name: PropTypes.string,
+      offers: PropTypes.shape({
+        promotional_price: PropTypes.number,
+      }),
+      description: PropTypes.string,
+      price: PropTypes.number,
     }),
   }).isRequired,
 };
