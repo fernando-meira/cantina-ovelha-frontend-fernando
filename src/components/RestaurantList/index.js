@@ -6,7 +6,10 @@ import logo from '../../themes/assets/images/vegan-restaurant-logo-design_1438-1
 import { Container, LogoRestaurant, OpenOrClosed } from './styles';
 
 export default function RestaurantList({ restaurants }) {
-  // console.log('Restaurant', restaurants);
+  console.log(
+    'Restaurant Array',
+    restaurants.map(restaurant => restaurant)
+  );
   return (
     <Container>
       {restaurants.map(restaurant => (
@@ -21,17 +24,19 @@ export default function RestaurantList({ restaurants }) {
               }
             />
 
-            <div>
+            <div className="RestaurantInfo">
               <strong>{restaurant.name}</strong>
-              {restaurant.address.map(add => (
-                <span key={add.id_address}>{`${add.street}, ${
-                  add.number === null ? 'S/N' : add.number
-                }, ${add.district}, ${add.city}, ${add.state}`}</span>
+              {restaurant.addresses?.map(address => (
+                <span key={address.id_address}>{`${address.street}, ${
+                  address.number === null ? 'S/N' : address.number
+                }, ${address.district}, ${address.city}, ${
+                  address.state
+                }`}</span>
               ))}
             </div>
 
-            <OpenOrClosed status={restaurant.schedule[0]?.isOpen}>
-              {restaurant.schedule[0]?.isOpen ? (
+            <OpenOrClosed status={restaurant.schedules[0]?.isOpen}>
+              {restaurant.schedules[0]?.isOpen === true ? (
                 <p>Aberto agora</p>
               ) : (
                 <p>Fechado</p>

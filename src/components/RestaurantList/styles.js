@@ -67,6 +67,10 @@ export const Container = styled.ul`
   li:hover {
     transform: scale(1.04);
   }
+
+  .RestaurantInfo {
+    padding-right: ${pxToRem(8)};
+  }
 `;
 
 export const OpenOrClosed = styled.div`
