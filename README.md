@@ -1,68 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Cantina do Ovelha
 
-## Available Scripts
+Inicialmente o projeto tem o intuito de exibir uma lista de restaurantes anteriormente cadastrado no banco de dados, exibir os cardápios específicos de cada restaurante e seu horário de funcionamento. Esses dados devem ser consumidos de uma API Rest.
 
-In the project directory, you can run:
+A aplicação foi desenvolvida em ReactJS.
 
-### `yarn start`
+## Starting locally
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Execute o seguinte comando no terminal para clonar o projeto:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+     $ git clone https://github.com/fernando-meira/cantina-ovelha-frontend-fernando.git
 
-### `yarn test`
+Para a instalação das dependências digite:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    yarn
 
-### `yarn build`
+Inicie o projeto com o comando:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    yarn start
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Built With
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [ReactJS](https://github.com/facebook/react) - Biblioteca utilizada para criar a interface da aplicação.
 
-### `yarn eject`
+- [Axios](https://github.com/axios/axios) - Utilizado para requisições Ajax e por algumas vantagens em relação a biblioteca padrão do navegador(fetch). Exemplo a definição de uma baseURL para repetir em todas as requisições.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [PropTypes](https://github.com/facebook/prop-types) - Biblioteca declarativa, utilizada para auxiliar na criação da interface.
+- [React Icons](https://github.com/react-icons/react-icons) - Um dos pacotes de ícones mais populares para React.
+- [React Modal](https://www.npmjs.com/package/react-modal) - Componente de modal, apresentei certa dificuldade no inicio para entender o funcionamento, mas em minha ótica é a biblioteca mais completa de modal para React.
+- [React Loading Io](https://www.npmjs.com/package/react-loading-io) - Componente de loading, utilizado pela facilidade que tive para entende-lo.
+- [Styled Components](https://styled-components.com/) - Toda estilização da aplicação foi feita com Styled Components devido a grande gama de opções que a biblioteca disponibiliza.
+- [Styled Media Query](https://www.npmjs.com/package/styled-media-query) - Utilizado para a responsividade da aplicação, como possui breakpoints definidos facilitou o desenvolvimento, quando necessário a lib ainda me permitiu criar meus próprios breakpoints.
+- [React Accessible Accordion](https://react-accessible-accordion.springload.co.nz/) - Componente accordion da onde são listados os produtos de um determinado restaurante. Biblioteca utilizada devido a sua praticidade e facilidade de manutenção.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Workspace
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [Yarn](https://yarnpkg.com/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Commitizen](https://github.com/commitizen/cz-cli)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Dificuldades
 
-## Learn More
+### Interface
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Em relação a interface da aplicação, tive problemas com o modal, procurei algumas libs e fiz alguns testes até que decidi utilizar o [React Modal](https://www.npmjs.com/package/react-modal) que facilitou bastante o trabalho.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Integração
 
-### Code Splitting
+- Na integração tive dificuldade para entender o envio de informações por parâmetro na URL, então demorei algum tempo para conseguir enviar os dados de um restaurante selecionado para a página onde seriam exibidas as informações relativas a ele;
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- Outro ponto que notei algumas dificuldades foram em relação ao consumo de diferentes rotas da API. Ainda estou estudando sobre para um melhor entendimento;
+- Problemas para tratar os horários e datas conforme solicitado no escopo do projeto. (Ainda não consegui, e atualmente os dados são estáticos).
 
-### Analyzing the Bundle Size
+## Melhorias
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Padronizar os commits;
+- Atualizar o sistema de horário;
+- Concluir a integração com a API;
+- Melhorar a lógica da quantidade de produtos no modal;
+- Funcionalidade de busca dos produtos na pagina do restaurante;
 
-### Making a Progressive Web App
+## Observação
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+O projeto não foi concluído dentro do prazo estipulado, no entanto consegui entender e aplicar vários conceitos de frontend que antes dele não o fazia. Pude também conhecer novas tecnologias e aprender um pouco sobre o funcionamento de banco de dados e backend que até então não tinha tido contato.

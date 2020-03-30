@@ -112,6 +112,7 @@ export const ItemRestaurant = styled.section`
   }
 
   .PlateDetails {
+    width: 100%;
     padding: ${pxToRem(16)};
 
     overflow: hidden;
