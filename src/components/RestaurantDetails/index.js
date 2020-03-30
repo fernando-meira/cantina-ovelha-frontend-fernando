@@ -5,8 +5,6 @@ import logo from '../../themes/assets/images/vegan-restaurant-logo-design_1438-1
 import { Container, Details, LogoRestaurant } from './styles';
 
 export default function RestaurantDetails({ restaurant }) {
-  // console.log('Data', restaurant);
-
   return (
     <Container>
       <LogoRestaurant
@@ -15,11 +13,11 @@ export default function RestaurantDetails({ restaurant }) {
 
       <Details>
         <strong>{restaurant.name}</strong>
-        {restaurant.address &&
-          restaurant.address.map(add => (
-            <p key={add.id_address}>{`${add.street}, ${
-              add.number === null ? 'S/N' : add.number
-            }, ${add.district}, ${add.city} - ${add.state}`}</p>
+        {restaurant.addresses &&
+          restaurant.addresses.map(address => (
+            <p key={address.id_address}>{`${address.street}, ${
+              address.number === null ? 'S/N' : address.number
+            }, ${address.district}, ${address.city} - ${address.state}`}</p>
           ))}
         <p className="Days">
           Segunda à Sexta: <span>11:30 às 15:00</span>
@@ -44,7 +42,7 @@ RestaurantDetails.protoTypes = {
       url: PropTypes.string,
     }),
     name: PropTypes.string,
-    address: PropTypes.arrayOf(
+    addresses: PropTypes.arrayOf(
       PropTypes.shape({
         id_address: PropTypes.number,
         street: PropTypes.string,

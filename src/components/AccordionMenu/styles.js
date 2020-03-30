@@ -221,3 +221,8 @@ export const ProductImage = styled.div`
   background-size: cover;
   background-position: center;
 `;
+
+export const Price = styled.p`
+  color: ${colors.green};
+  font-size: ${pxToRem(16)} !important;
+`;
