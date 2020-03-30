@@ -15,7 +15,7 @@ import no_image from '../../themes/assets/images/no_image.png';
 import { Container, ProductImage, ItemRestaurant, PromoCard } from './styles';
 
 export default function AccordionMenu({ openModal, categories }) {
-  console.log('Categories:', categories);
+  // console.log('Categories:', categories);
 
   return (
     <Container>
@@ -55,9 +55,9 @@ export default function AccordionMenu({ openModal, categories }) {
                       <p>{p.description}</p>
 
                       <div className="ProductValues">
-                        <span>{formatPrice(100)}</span>
+                        <span>{formatPrice(20)}</span>
 
-                        <p>{formatPrice(100)}</p>
+                        <p>{formatPrice(20)}</p>
                       </div>
                     </div>
                   </ItemRestaurant>
