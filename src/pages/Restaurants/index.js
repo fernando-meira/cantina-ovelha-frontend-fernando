@@ -75,7 +75,11 @@ function Restaurants() {
               onRequestClose={closeModal}
               categories={categories}
             />
-            <AccordionMenu openModal={openModal} categories={categories} />
+            <AccordionMenu
+              openModal={openModal}
+              categories={categories}
+              restaurant={restaurant}
+            />
           </TopContainers>
           <LateralBlock />
         </Container>
