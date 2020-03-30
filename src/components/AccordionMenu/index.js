@@ -33,44 +33,47 @@ export default function AccordionMenu({ openModal, categories, restaurant }) {
             <AccordionItemButton>{category.description}</AccordionItemButton>
             <AccordionItemPanel>
               <div className="Panel">
-                {restaurant.products?.map(p => (
-                  <ItemRestaurant
-                    key={p.product.id_product}
-                    onClick={() => openModal()}
-                  >
-                    <ProductImage
-                      backgroundImage={
-                        p.product.picture ? p.product.picture.url : no_image
-                      }
-                    />
-                    <div className="PlateDetails">
-                      <div className="TopDetails">
-                        <strong>{p.product.name}</strong>
+                {restaurant.products
+                  ?.filter(p => p.product.id_category === category.id_category)
+                  .map(p => (
+                    <ItemRestaurant
+                      key={p.id_restaurant_product}
+                      onClick={() => openModal()}
+                    >
+                      <ProductImage
+                        backgroundImage={
+                          p.product.picture ? p.product.picture.url : no_image
+                        }
+                      />
+                      <div className="PlateDetails">
+                        <div className="TopDetails">
+                          <strong>{p.product.name}</strong>
 
-                        {p.offers.promotional_price && (
-                          <PromoCard>
-                            <FaAward />
+                          {p.offers[0]?.promotional_price && (
+                            <PromoCard>
+                              <FaAward />
 
-                            <p>
-                              Promo <span>{category.description}</span>
-                            </p>
-                          </PromoCard>
+                              <p>
+                                Promo <span>{category.description}</span>
+                              </p>
+                            </PromoCard>
+                          )}
+                        </div>
+                        <p>{p.product.description}</p>
+
+                        {p.offers[0]?.promotional_price ? (
+                          <div className="ProductValues">
+                            <span>
+                              {formatPrice(p.offers[0]?.promotional_price)}
+                            </span>
+                            <p>{formatPrice(p.price)}</p>
+                          </div>
+                        ) : (
+                          <Price>{formatPrice(p.price)}</Price>
                         )}
                       </div>
-                      <p>{p.product.description}</p>
-
-                      {p.offers.promotional_price ? (
-                        <div className="ProductValues">
-                          <span>{formatPrice(p.offers)}</span>
-
-                          <p>{formatPrice(p.price)}</p>
-                        </div>
-                      ) : (
-                        <Price>{formatPrice(p.price)}</Price>
-                      )}
-                    </div>
-                  </ItemRestaurant>
-                ))}
+                    </ItemRestaurant>
+                  ))}
               </div>
             </AccordionItemPanel>
           </AccordionItem>
@@ -100,7 +103,7 @@ AccordionMenu.propTypes = {
       name: PropTypes.string,
       offers: PropTypes.shape({
         promotional_price: PropTypes.number,
-      }),
+      }).isRequired,
       description: PropTypes.string,
       price: PropTypes.number,
     }),
