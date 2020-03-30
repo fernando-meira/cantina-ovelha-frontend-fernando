@@ -41,4 +41,25 @@ Inicie o projeto com o comando:
 
 ## Dificuldades
 
-Algumas das dificuldades que tive e ainda estou tendo com o projeto são:
+### Interface
+
+- Em relação a interface da aplicação, tive problemas com o modal, procurei algumas libs e fiz alguns testes até que decidi utilizar o [React Modal](https://www.npmjs.com/package/react-modal) que facilitou bastante o trabalho.
+
+### Integração
+
+- Na integração tive dificuldade para entender o envio de informações por parâmetro na URL, então demorei algum tempo para conseguir enviar os dados de um restaurante selecionado para a página onde seriam exibidas as informações relativas a ele;
+
+- Outro ponto que notei algumas dificuldades foram em relação ao consumo de diferentes rotas da API. Ainda estou estudando sobre para um melhor entendimento;
+- Problemas para tratar os horários e datas conforme solicitado no escopo do projeto. (Ainda não consegui, e atualmente os dados são estáticos).
+
+## Melhorias
+
+- Padronizar os commits;
+- Atualizar o sistema de horário;
+- Concluir a integração com a API;
+- Melhorar a lógica da quantidade de produtos no modal;
+- Funcionalidade de busca dos produtos na pagina do restaurante;
+
+## Observação
+
+O projeto não foi concluído dentro do prazo estipulado, no entanto consegui entender e aplicar vários conceitos de frontend que antes dele não o fazia. Pude também conhecer novas tecnologias e aprender um pouco sobre o funcionamento de banco de dados e backend que até então não tinha tido contato.
