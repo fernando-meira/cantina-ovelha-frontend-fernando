@@ -1,87 +1,44 @@
 # Cantina do Ovelha
 
-Inicialmente o projeto tem o intuito de exibir uma lista de restaurantes anteriormente cadastrado no banco de dados, exibir os cardápios especificos de cada restaurante e seu horário de funcionamento. Esses dados devem ser consumidos de uma API Rest.
+Inicialmente o projeto tem o intuito de exibir uma lista de restaurantes anteriormente cadastrado no banco de dados, exibir os cardápios específicos de cada restaurante e seu horário de funcionamento. Esses dados devem ser consumidos de uma API Rest.
 
-## Getting Started
+A aplicação foi desenvolvida em ReactJS.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## Starting locally
 
-### Prerequisites
+Execute o seguinte comando no terminal para clonar o projeto:
 
-What things you need to install the software and how to install them
+     $ git clone https://github.com/fernando-meira/cantina-ovelha-frontend-fernando.git
 
-```
-Give examples
-```
+Para a instalação das dependências digite:
 
-### Installing
+    yarn
 
-A step by step series of examples that tell you how to get a development env running
+Inicie o projeto com o comando:
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+    yarn start
 
 ## Built With
 
-- [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-- [Maven](https://maven.apache.org/) - Dependency Management
-- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+- [ReactJS](https://github.com/facebook/react) - Biblioteca utilizada para criar a interface da aplicação.
 
-## Contributing
+- [Axios](https://github.com/axios/axios) - Utilizado para requisições Ajax e por algumas vantagens em relação a biblioteca padrão do navegador(fetch). Exemplo a definição de uma baseURL para repetir em todas as requisições.
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+- [PropTypes](https://github.com/facebook/prop-types) - Biblioteca declarativa, utilizada para auxiliar na criação da interface.
+- [React Icons](https://github.com/react-icons/react-icons) - Um dos pacotes de ícones mais populares para React.
+- [React Modal](https://www.npmjs.com/package/react-modal) - Componente de modal, apresentei certa dificuldade no inicio para entender o funcionamento, mas em minha ótica é a biblioteca mais completa de modal para React.
+- [React Loading Io](https://www.npmjs.com/package/react-loading-io) - Componente de loading, utilizado pela facilidade que tive para entende-lo.
+- [Styled Components](https://styled-components.com/) - Toda estilização da aplicação foi feita com Styled Components devido a grande gama de opções que a biblioteca disponibiliza.
+- [Styled Media Query](https://www.npmjs.com/package/styled-media-query) - Utilizado para a responsividade da aplicação, como possui breakpoints definidos facilitou o desenvolvimento, quando necessário a lib ainda me permitiu criar meus próprios breakpoints.
+- [React Accessible Accordion](https://react-accessible-accordion.springload.co.nz/) - Componente accordion da onde são listados os produtos de um determinado restaurante. Biblioteca utilizada devido a sua praticidade e facilidade de manutenção.
 
-## Versioning
+## Workspace
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+- [Yarn](https://yarnpkg.com/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Commitizen](https://github.com/commitizen/cz-cli)
 
-## Authors
+## Dificuldades
 
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+Algumas das dificuldades que tive e ainda estou tendo com o projeto são:
