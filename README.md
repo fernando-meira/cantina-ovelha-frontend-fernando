@@ -4,6 +4,10 @@ Inicialmente o projeto tem o intuito de exibir uma lista de restaurantes anterio
 
 A aplicação foi desenvolvida em ReactJS.
 
+## Demo
+
+https://cantina-ovelha.netlify.app/
+
 ## Starting locally
 
 Execute o seguinte comando no terminal para clonar o projeto:
