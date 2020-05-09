@@ -14,8 +14,6 @@ export default function Modal({ isOpen, onRequestClose, categories }) {
   const valor = 20;
   const [total, setTotal] = useState(formatPrice(valor));
 
-  console.log('Categories', categories);
-
   function changeQuantity(quantityProducts, value) {
     if (quantity > 0) {
       setQuantity(quantityProducts + value);

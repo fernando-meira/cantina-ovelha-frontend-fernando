@@ -19,8 +19,6 @@ export default function Main() {
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [searchRestaurant, setSearchRestaurant] = useState('');
 
-  // console.log('Search Restaurant', restaurants);
-
   useEffect(() => {
     async function fetchRestaurants() {
       setLoading(true);
@@ -29,10 +27,8 @@ export default function Main() {
 
         setRestaurants(data);
         setAllRestaurants(data);
-        setLoading(false);
       } catch (error) {
         console.log('Error', error.message);
-        setLoading(false);
       } finally {
         setLoading(false);
       }

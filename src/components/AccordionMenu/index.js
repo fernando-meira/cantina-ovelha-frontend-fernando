@@ -9,7 +9,7 @@ import {
 } from 'react-accessible-accordion';
 
 import { formatPrice } from '../../functions';
-import no_image from '../../themes/assets/images/no_image.png';
+import noImage from '../../themes/assets/images/no_image.png';
 
 import {
   Container,
@@ -20,8 +20,6 @@ import {
 } from './styles';
 
 export default function AccordionMenu({ openModal, categories, restaurant }) {
-  console.log('Restaurant:', restaurant);
-
   return (
     <Container>
       <Accordion
@@ -42,7 +40,7 @@ export default function AccordionMenu({ openModal, categories, restaurant }) {
                     >
                       <ProductImage
                         backgroundImage={
-                          p.product.picture ? p.product.picture.url : no_image
+                          p.product.picture ? p.product.picture.url : noImage
                         }
                       />
                       <div className="PlateDetails">
