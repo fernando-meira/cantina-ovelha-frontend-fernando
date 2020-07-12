@@ -1,4 +1,5 @@
 import Modal from './Modal';
+import Error from './Error';
 import Header from './Header';
 import Search from './Search';
 import Loading from './Loading';
@@ -10,6 +11,7 @@ import RestaurantDetails from './RestaurantDetails';
 
 export {
   Modal,
+  Error,
   Header,
   Search,
   Loading,

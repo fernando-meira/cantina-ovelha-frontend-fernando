@@ -4,6 +4,7 @@ import media from 'styled-media-query';
 import { pxToRem } from '../../functions';
 
 export const Container = styled.div`
+  margin: 0 auto;
   max-width: ${pxToRem(1366)};
 
   ${media.lessThan('large')`

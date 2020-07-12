@@ -3,18 +3,20 @@ import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 
 import {
+  Error,
   Header,
   Search,
   Loading,
-  RestaurantList,
   TopMessage,
+  RestaurantList,
 } from '../../components';
 import { filterItems } from '../../functions';
 
 import { Container } from './styles';
 
 export default function Main() {
-  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState({});
   const [restaurants, setRestaurants] = useState([]);
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [searchRestaurant, setSearchRestaurant] = useState('');
@@ -28,7 +30,11 @@ export default function Main() {
         setRestaurants(data);
         setAllRestaurants(data);
       } catch (error) {
-        console.log('Error', error.message);
+        setError({
+          error: true,
+          message: error.message,
+          info: 'Erro ao processar a solicitação, tente novamente!',
+        });
       } finally {
         setLoading(false);
       }
@@ -67,6 +73,7 @@ export default function Main() {
             setSearchRestaurant={setSearchRestaurant}
           />
 
+          {Object.keys(error).length > 0 && <Error data={error} />}
           <RestaurantList restaurants={restaurants} />
         </Container>
       )}
