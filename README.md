@@ -6,7 +6,7 @@ A aplicação foi desenvolvida em ReactJS.
 
 ## Demo
 
-https://cantina-ovelha.netlify.app/
+https://listrestaurant.netlify.app/
 
 ## Starting locally
 
