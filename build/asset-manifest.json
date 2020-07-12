@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.js": "/static/js/main.c4976e40.chunk.js",
-    "main.js.map": "/static/js/main.c4976e40.chunk.js.map",
+    "main.js": "/static/js/main.c450f0a3.chunk.js",
+    "main.js.map": "/static/js/main.c450f0a3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.b5c18508.js",
     "runtime-main.js.map": "/static/js/runtime-main.b5c18508.js.map",
     "static/css/2.772b860c.chunk.css": "/static/css/2.772b860c.chunk.css",
-    "static/js/2.42678830.chunk.js": "/static/js/2.42678830.chunk.js",
-    "static/js/2.42678830.chunk.js.map": "/static/js/2.42678830.chunk.js.map",
+    "static/js/2.4b9071ac.chunk.js": "/static/js/2.4b9071ac.chunk.js",
+    "static/js/2.4b9071ac.chunk.js.map": "/static/js/2.4b9071ac.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.88b40b9dbeffe6d2f11d57287fdf4ee5.js": "/precache-manifest.88b40b9dbeffe6d2f11d57287fdf4ee5.js",
+    "precache-manifest.68cb8a026533a5d1a734de7868e3fb87.js": "/precache-manifest.68cb8a026533a5d1a734de7868e3fb87.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.772b860c.chunk.css.map": "/static/css/2.772b860c.chunk.css.map",
-    "static/js/2.42678830.chunk.js.LICENSE.txt": "/static/js/2.42678830.chunk.js.LICENSE.txt",
+    "static/js/2.4b9071ac.chunk.js.LICENSE.txt": "/static/js/2.4b9071ac.chunk.js.LICENSE.txt",
     "static/media/prato-de-restaurante-vegetariano-modal.png": "/static/media/prato-de-restaurante-vegetariano-modal.8a18923f.png",
     "static/media/vegan-restaurant-logo-design_1438-10@2x.png": "/static/media/vegan-restaurant-logo-design_1438-10@2x.935271f4.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b5c18508.js",
     "static/css/2.772b860c.chunk.css",
-    "static/js/2.42678830.chunk.js",
-    "static/js/main.c4976e40.chunk.js"
+    "static/js/2.4b9071ac.chunk.js",
+    "static/js/main.c450f0a3.chunk.js"
   ]
 }

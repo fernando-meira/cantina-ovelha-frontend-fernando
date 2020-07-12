@@ -33,7 +33,7 @@ export default function Main() {
         setError({
           error: true,
           message: error.message,
-          info: 'Erro ao processar a solicitação, tente novamente!',
+          info: 'API offline, desculpe!',
         });
       } finally {
         setLoading(false);
